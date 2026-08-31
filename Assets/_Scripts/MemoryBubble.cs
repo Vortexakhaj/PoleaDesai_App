@@ -24,7 +24,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     public int selectionCount = 0;
 
     [SerializeField] private bool isCurrentlySelected = false;
-    private Vector2 targetScale;
+    public Vector2 targetScale;
     private Rigidbody2D rb;
     private CircleCollider2D col;
     private Rectangle bubbleImage;
