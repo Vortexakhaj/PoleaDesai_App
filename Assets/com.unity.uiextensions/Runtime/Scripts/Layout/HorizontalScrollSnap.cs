@@ -81,19 +81,44 @@ namespace UnityEngine.UI.Extensions
             float _offset = 0;
             float _dimension = 0;
             Rect panelDimensions = gameObject.GetComponent<RectTransform>().rect;
+
+            // --- NEW: pull spacing from an attached HorizontalLayoutGroup (if any) ---
+            float _spacing = 0f;
+            float _leftPadding = 0f;
+            var hlg = _screensContainer.GetComponent<HorizontalLayoutGroup>();
+            if (hlg != null)
+            {
+                _spacing = hlg.spacing;
+                _leftPadding = hlg.padding.left;
+            }
+            // -----------------------------------------------------------------------
+
             float currentXPosition = 0;
-            var pageStepValue = _childSize = (int)panelDimensions.width * ((PageStep == 0) ? 3 : PageStep);
+
+            // Per-child stride between consecutive page anchors.
+            // With spacing == 0 this is identical to the previous behaviour.
+            var pageStepValue = _childSize = (int)(panelDimensions.width + _spacing) * ((PageStep == 0) ? 3 : PageStep);
+
+            // Each child is shrunk by the spacing so neighbouring pages don't overlap
+            // the gap. If there is no layout group / spacing, this is a no-op.
+            float childWidth = panelDimensions.width;
+            float childHeight = panelDimensions.height;
 
             for (int i = 0; i < _screensContainer.transform.childCount; i++)
             {
                 RectTransform child = _screensContainer.transform.GetChild(i).gameObject.GetComponent<RectTransform>();
-                currentXPosition = _offset + i * pageStepValue;
-                child.sizeDelta = new Vector2(panelDimensions.width, panelDimensions.height);
+
+                // Position: left padding for the first element, then full page stride afterwards.
+                currentXPosition = _leftPadding + _offset + i * pageStepValue;
+
+                child.sizeDelta = new Vector2(childWidth, childHeight);
                 child.anchoredPosition = new Vector2(currentXPosition, 0f);
                 child.anchorMin = child.anchorMax = child.pivot = _childAnchorPoint;
             }
 
-            _dimension = currentXPosition + _offset * -1;
+            // Total content width = last child's X + its width + trailing spacing
+            // (so the final page can scroll fully into view).
+            _dimension = currentXPosition + childWidth + _spacing + _offset * -1;
 
             _screensContainer.GetComponent<RectTransform>().offsetMax = new Vector2(_dimension, 0f);
         }
