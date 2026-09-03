@@ -189,7 +189,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 105
+  m_Radius: 130
 --- !u!114 &218613761978729427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSize: 1
-  maxSize: 2
+  maxSize: 1.6
   growthStep: 0.2
   scaleSpeed: 2
   thresholdClickCount: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   selectedColor: {r: 1, g: 0.8, b: 0.4, a: 1}
   selectionCount: 0
   isCurrentlySelected: 0
-  targetScale: {x: 2, y: 2}
+  targetScale: {x: 1, y: 1}
 --- !u!1 &7235307830345689828
 GameObject:
   m_ObjectHideFlags: 0

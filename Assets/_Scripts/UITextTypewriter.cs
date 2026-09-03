@@ -9,7 +9,7 @@ using TMPro;
 using UnityEditor;
 #endif
 
-public enum TypingMode { Characters, Words, Paragraphs }
+public enum TypingMode { Characters, Words, Lines, Paragraphs }
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class UITextTypewriter : MonoBehaviour
@@ -18,10 +18,10 @@ public class UITextTypewriter : MonoBehaviour
     public TextMeshProUGUI text;
     public bool playOnEnable = true;
     public bool autoRepeat = false;
+    public float autoRepeatDelay = 2f;
     public float delayToStart = 0f;
-    [Tooltip("If true, rich text tags (e.g. <b>, <color=red>, </color>) are added instantly instead of typed out.")]
-    public bool skipRichTextTags = true;
-    [Tooltip("Characters = type letter by letter.\nWords = type word by word.\nParagraphs = type paragraph by paragraph.")]
+
+    [Tooltip("Characters = type letter by letter.\nWords = type word by word.\nLines = type line by line.\nParagraphs = type paragraph by paragraph.")]
     public TypingMode typingMode = TypingMode.Characters;
 
     [Tooltip("Delay between characters.")]
@@ -30,12 +30,18 @@ public class UITextTypewriter : MonoBehaviour
     [Tooltip("Delay between words.")]
     public float delayBetweenWords = 0.15f;
 
+    [Tooltip("Delay between lines.")]
+    public float delayBetweenLines = 0.3f;
+
     [Tooltip("Delay between paragraphs.")]
     public float delayBetweenParagraphs = 0.5f;
 
     public float delayAfterPunctuation = 0.5f;
     public string trailingChar;
-    [TextArea] public string story;    
+    [TextArea] public string story;
+
+    [Tooltip("If true, rich text tags (e.g. <b>, <color=red>, </color>) are added instantly instead of typed out.")]
+    public bool skipRichTextTags = true;
 
     private bool lastCharPunctuation = false;
     private char charComma;
@@ -59,6 +65,7 @@ public class UITextTypewriter : MonoBehaviour
         switch (typingMode)
         {
             case TypingMode.Words: return delayBetweenWords;
+            case TypingMode.Lines: return delayBetweenLines;
             case TypingMode.Paragraphs: return delayBetweenParagraphs;
             default: return delayBetweenChars;
         }
@@ -84,7 +91,11 @@ public class UITextTypewriter : MonoBehaviour
     {
         if (playOnEnable)
         {
-            ChangeText(text.text, delayToStart);
+            // Always use the original story string if it exists to prevent losing text on quick toggles
+            if (!string.IsNullOrEmpty(story))
+                ChangeText(story, delayToStart);
+            else
+                ChangeText(text.text, delayToStart);
         }
     }
 
@@ -124,7 +135,7 @@ public class UITextTypewriter : MonoBehaviour
             yield return StartCoroutine(PlayText());
 
             if (autoRepeat)
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(autoRepeatDelay);
 
         } while (autoRepeat);
     }
@@ -141,8 +152,9 @@ public class UITextTypewriter : MonoBehaviour
             if (string.IsNullOrEmpty(chunk))
                 continue;
 
-            // Check if the chunk is purely a rich text tag
-            bool isPureTag = skipRichTextTags && chunk.StartsWith("<") && chunk.EndsWith(">");
+            // Check if the chunk is purely a rich text tag (ignoring trailing spaces)
+            string trimmedChunk = chunk.Trim();
+            bool isPureTag = skipRichTextTags && trimmedChunk.StartsWith("<") && trimmedChunk.EndsWith(">");
 
             if (isPureTag)
             {
@@ -209,6 +221,7 @@ public class UITextTypewriter : MonoBehaviour
 
     private string GetNextChunk(string source, int index, out int nextIndex)
     {
+        // --- Characters ---
         if (typingMode == TypingMode.Characters)
         {
             if (skipRichTextTags && source[index] == '<')
@@ -224,9 +237,11 @@ public class UITextTypewriter : MonoBehaviour
             return source.Substring(index, 1);
         }
 
+        // --- Words, Lines, or Paragraphs ---
         int start = index;
         while (index < source.Length)
         {
+            // Consume Rich Text tags entirely within the chunk
             if (skipRichTextTags && source[index] == '<')
             {
                 int close = source.IndexOf('>', index);
@@ -237,15 +252,29 @@ public class UITextTypewriter : MonoBehaviour
                 }
             }
 
+            // Words: Break on any whitespace (including newlines)
             if (typingMode == TypingMode.Words && char.IsWhiteSpace(source[index]))
             {
                 index++;
                 break;
             }
 
+            // Lines: Break on a single newline
+            if (typingMode == TypingMode.Lines && (source[index] == '\n' || source[index] == '\r'))
+            {
+                // Consume \r\n or \n
+                if (source[index] == '\r' && index + 1 < source.Length && source[index + 1] == '\n')
+                    index += 2;
+                else
+                    index++;
+                break;
+            }
+
+            // Paragraphs: Break and consume ALL consecutive newlines
             if (typingMode == TypingMode.Paragraphs && (source[index] == '\n' || source[index] == '\r'))
             {
-                index++;
+                while (index < source.Length && (source[index] == '\n' || source[index] == '\r'))
+                    index++;
                 break;
             }
 
@@ -289,6 +318,10 @@ public class UITextTypewriterEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("text"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("playOnEnable"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("autoRepeat"));
+        if (serializedObject.FindProperty("autoRepeat").boolValue)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("autoRepeatDelay"));
+        }
         EditorGUILayout.PropertyField(serializedObject.FindProperty("delayToStart"));
 
         EditorGUILayout.Space();
@@ -306,6 +339,9 @@ public class UITextTypewriterEditor : Editor
                 break;
             case TypingMode.Words:
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("delayBetweenWords"));
+                break;
+            case TypingMode.Lines:
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("delayBetweenLines"));
                 break;
             case TypingMode.Paragraphs:
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("delayBetweenParagraphs"));
