@@ -1,4 +1,5 @@
 using ThisOtherThing.UI.Shapes;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,13 +16,23 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
 
     [Header("Selection Count Settings")]
     public int thresholdClickCount = 100;
+    public TextMeshProUGUI counterText;
 
     [Header("Selection Visuals")]
     public Color normalColor = Color.white;
     public Color selectedColor = new Color(1f, 0.8f, 0.4f);
 
     [HideInInspector]
-    public int selectionCount = 0;
+    private int selectionCount = 0;
+    public int SelectionCount
+    {
+        get { return selectionCount; }
+        set
+        {
+            selectionCount = value;
+            counterText.text = selectionCount.ToString();
+        }
+    }
 
     [SerializeField] private bool isCurrentlySelected = false;
     public Vector2 targetScale;
@@ -30,20 +41,27 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     private Rectangle bubbleImage;
     private BubbleManager manager;
 
-    void Start()
+    private void Awake()
     {
+        manager = FindFirstObjectByType<BubbleManager>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CircleCollider2D>();
         bubbleImage = GetComponent<Rectangle>();
-        manager = FindFirstObjectByType<BubbleManager>();
+
+        normalColor = bubbleImage.ShapeProperties.FillColor;
+        selectedColor = DarkenViaHSV(normalColor, 1f);
+
+        counterText.color = DarkenViaHSV(normalColor, -0.2f);
 
         rb.gravityScale = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
 
+    void Start()
+    {
         if (bubbleImage != null)
         {
-            bubbleImage.ShapeProperties.DrawOutline = false;
-            bubbleImage.ForceMeshUpdate();
+            FillColor(normalColor);
         }
         UpdateTargetScale();
         transform.localScale = targetScale;
@@ -56,6 +74,17 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
             transform.localScale = Vector2.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSpeed);
             //col.radius = Mathf.Lerp(col.radius, targetScale.x * 0.5f, Time.deltaTime * scaleSpeed);
         }
+    }
+
+    Color DarkenViaHSV(Color color, float reduceValueBy)
+    {
+        float h, s, v;
+        Color.RGBToHSV(color, out h, out s, out v);
+
+        // Subtract from the brightness component
+        v = Mathf.Clamp01(v + reduceValueBy);
+
+        return Color.HSVToRGB(h, s, v);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -81,14 +110,19 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    private void FillColor(Color color)
+    {
+        bubbleImage.ShapeProperties.FillColor = color;
+        bubbleImage.ForceMeshUpdate();
+    }
+
     // Turns on the visual selection state
     private void ActivateSelectionVisuals()
     {
         isCurrentlySelected = true;
         if (bubbleImage != null)
         {
-            bubbleImage.ShapeProperties.DrawOutline = true;
-            bubbleImage.ForceMeshUpdate();
+            FillColor(selectedColor);
         }
     }
 
@@ -98,8 +132,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
         isCurrentlySelected = false;
         if (bubbleImage != null)
         {
-            bubbleImage.ShapeProperties.DrawOutline = false;
-            bubbleImage.ForceMeshUpdate();
+            FillColor(normalColor);
         }
     }
 
@@ -107,8 +140,8 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     {
         if (isCurrentlySelected)
         {
-            selectionCount++;
-            if (selectionCount % thresholdClickCount == 0)
+            SelectionCount++;
+            if (SelectionCount % Mathf.Max(thresholdClickCount,1) == 0)
             {
                 GrowBubble();
             }
@@ -126,19 +159,19 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
 
     public void ResetBubble()
     {
-        selectionCount = 0;
+        SelectionCount = 0;
         UpdateTargetScale();
     }
 
     public void InitializeFromData(int loadedCount)
     {
-        selectionCount = loadedCount;
+        SelectionCount = loadedCount;
         UpdateTargetScale();
     }
 
     private void UpdateTargetScale()
     {
-        int steps = selectionCount / thresholdClickCount;
+        int steps = SelectionCount / Mathf.Max(thresholdClickCount, 1);
         float calculatedSize = minSize + (steps * growthStep);
 
         if (calculatedSize > maxSize) calculatedSize = maxSize;

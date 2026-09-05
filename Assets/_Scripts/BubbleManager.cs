@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine.Events;
+using System.Collections;
 
 public class BubbleManager : MonoBehaviour
 {
@@ -19,6 +21,10 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private Button doneButton;
     [SerializeField] private int minSelectionsToEnableDone = 1;
 
+    [SerializeField] private float doneDelay = 1.5f;
+    public UnityEvent doneSelectionEvent;
+
+    private GameObject _blocker;
     private string saveFilePath;
 
     [Serializable]
@@ -27,6 +33,7 @@ public class BubbleManager : MonoBehaviour
     [Serializable]
     public class SaveData
     {
+        public int thresholdClickCount;
         public string lastResetDate;
         public List<BubbleData> bubbleData = new List<BubbleData>();
     }
@@ -91,6 +98,22 @@ public class BubbleManager : MonoBehaviour
         UpdateDoneButtonInteractable();
     }
 
+
+    public void StartLoading()
+    {
+        Canvas root = GetComponentInParent<Canvas>().rootCanvas;
+        _blocker = UIBlocker.CreateBlocker(
+            root,
+            onBlockerClicked: null,                       // no click handling
+            sortingOrderOffset: 5,
+            tintColor: new Color(0, 0, 0, 0f));         // dim background       
+    }
+
+    public void StopLoading()
+    {
+        UIBlocker.DestroyBlocker(_blocker);
+    }
+
     // ---------------------------------------------------------
     // CALL THIS FROM YOUR "DONE" UI BUTTON
     // ---------------------------------------------------------
@@ -112,6 +135,15 @@ public class BubbleManager : MonoBehaviour
 
         // Disable the done button since no bubbles are selected anymore
         UpdateDoneButtonInteractable();
+        StartLoading();
+        StartCoroutine(InvokeDoneButtonEventWithDelay(doneDelay));
+    }
+
+    IEnumerator InvokeDoneButtonEventWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StopLoading();
+        doneSelectionEvent?.Invoke();
     }
 
     private void UpdateDoneButtonInteractable()
@@ -146,6 +178,7 @@ public class BubbleManager : MonoBehaviour
             {
                 for (int i = 0; i < bubbles.Length; i++)
                 {
+                    bubbles[i].thresholdClickCount = loadedData.thresholdClickCount;
                     if (i < loadedData.bubbleData.Count)
                     {
                         bubbles[i].InitializeFromData(loadedData.bubbleData[i].selectionCount);
@@ -159,20 +192,23 @@ public class BubbleManager : MonoBehaviour
         }
     }
 
-    public void SaveCurrentState()
+    public async void SaveCurrentState()
     {
         SaveData data = new SaveData();
         data.lastResetDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
+        data.thresholdClickCount = Mathf.Max(bubbles[0].thresholdClickCount, 1);
         foreach (MemoryBubble bubble in bubbles)
         {
             BubbleData bData = new BubbleData();
-            bData.selectionCount = bubble.selectionCount;
+            bData.selectionCount = bubble.SelectionCount;
             data.bubbleData.Add(bData);
         }
 
         string json = JsonUtility.ToJson(data, true);
-        File.WriteAllText(Path.Combine(Application.streamingAssetsPath, "museumBubbles.json"), json);
+
+        if (!Directory.Exists(Application.streamingAssetsPath))
+            Directory.CreateDirectory(Application.streamingAssetsPath);
+        await File.WriteAllTextAsync(Path.Combine(Application.streamingAssetsPath, "museumBubbles.json"), json);
     }
 
     [ContextMenu("ResetRewrite")]
