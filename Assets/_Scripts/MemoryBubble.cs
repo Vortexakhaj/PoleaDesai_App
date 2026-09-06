@@ -49,9 +49,9 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
         bubbleImage = GetComponent<Rectangle>();
 
         normalColor = bubbleImage.ShapeProperties.FillColor;
-        selectedColor = DarkenViaHSV(normalColor, 1f);
+        selectedColor = DarkenViaHSV(normalColor, 0, 0.3f, 1f);
 
-        counterText.color = DarkenViaHSV(normalColor, -0.2f);
+        counterText.color = DarkenViaHSV(normalColor, 0f, 0f, -0.2f);
 
         rb.gravityScale = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -76,13 +76,15 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    Color DarkenViaHSV(Color color, float reduceValueBy)
+    Color DarkenViaHSV(Color color, float h_reduceValueBy = 0, float s_reduceValueBy = 0, float v_reduceValueBy = 0)
     {
         float h, s, v;
         Color.RGBToHSV(color, out h, out s, out v);
 
         // Subtract from the brightness component
-        v = Mathf.Clamp01(v + reduceValueBy);
+        h = Mathf.Clamp01(h + h_reduceValueBy);
+        s = Mathf.Clamp01(s + s_reduceValueBy);
+        v = Mathf.Clamp01(v + v_reduceValueBy);
 
         return Color.HSVToRGB(h, s, v);
     }
@@ -120,6 +122,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     private void ActivateSelectionVisuals()
     {
         isCurrentlySelected = true;
+        SelectionCount++;
         if (bubbleImage != null)
         {
             FillColor(selectedColor);
@@ -130,6 +133,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     public void ForceDeselect()
     {
         isCurrentlySelected = false;
+        SelectionCount--;
         if (bubbleImage != null)
         {
             FillColor(normalColor);
@@ -140,8 +144,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     {
         if (isCurrentlySelected)
         {
-            SelectionCount++;
-            if (SelectionCount % Mathf.Max(thresholdClickCount,1) == 0)
+            if (SelectionCount % Mathf.Max(thresholdClickCount, 1) == 0)
             {
                 GrowBubble();
             }

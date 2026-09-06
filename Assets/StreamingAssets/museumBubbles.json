@@ -1,12 +1,15 @@
 {
     "thresholdClickCount": 1,
-    "lastResetDate": "2026-09-06 03:15:36",
+    "lastResetDate": "2026-09-06 13:06:17",
     "bubbleData": [
         {
             "selectionCount": 0
         },
         {
-            "selectionCount": 2
+            "selectionCount": 0
+        },
+        {
+            "selectionCount": 0
         },
         {
             "selectionCount": 0
@@ -15,16 +18,13 @@
             "selectionCount": 0
         },
         {
-            "selectionCount": 1
-        },
-        {
             "selectionCount": 0
         },
         {
             "selectionCount": 0
         },
         {
-            "selectionCount": 3
+            "selectionCount": 0
         },
         {
             "selectionCount": 0
