@@ -4660,6 +4660,7 @@ MonoBehaviour:
   minuteHand: {fileID: 660313746}
   mode: 1
   customTimeSpeed: -5
+  startAtSystemTime: 1
   twelveOClockAngle: 0
 --- !u!1 &765451162
 GameObject:
