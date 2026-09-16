@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-using System.Text;
 using System;
 using TMPro;
 
@@ -38,7 +36,12 @@ public class UITextTypewriter : MonoBehaviour
 
     public float delayAfterPunctuation = 0.5f;
     public string trailingChar;
-    [TextArea] public string story;
+
+    [Tooltip("Array of text blocks to type out. If empty, defaults to the TextMeshProUGUI's current text.")]
+    [TextArea] public string[] stories;
+
+    [Tooltip("Delay between each text block in the array.")]
+    public float delayBetweenStories = 1.5f;
 
     [Tooltip("If true, rich text tags (e.g. <b>, <color=red>, </color>) are added instantly instead of typed out.")]
     public bool skipRichTextTags = true;
@@ -49,6 +52,8 @@ public class UITextTypewriter : MonoBehaviour
     private char charEmpty;
 
     private Coroutine typingCoroutine;
+    private bool useArray = true;
+    private string story; // Internal variable for the currently playing text
 
     [Header("Audio Settings")]
     [Tooltip("When true requires AudioSource on this object.")]
@@ -91,11 +96,7 @@ public class UITextTypewriter : MonoBehaviour
     {
         if (playOnEnable)
         {
-            // Always use the original story string if it exists to prevent losing text on quick toggles
-            if (!string.IsNullOrEmpty(story))
-                ChangeText(story, delayToStart);
-            else
-                ChangeText(text.text, delayToStart);
+            StartTypewriter();
         }
     }
 
@@ -108,6 +109,15 @@ public class UITextTypewriter : MonoBehaviour
         }
     }
 
+    public void StartTypewriter()
+    {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        useArray = true;
+        typingCoroutine = StartCoroutine(TypewriterSequence(delayToStart));
+    }
+
     public void ChangeText(string textContent, float delay = 0)
     {
         if (typingCoroutine != null)
@@ -115,13 +125,21 @@ public class UITextTypewriter : MonoBehaviour
 
         story = textContent;
         text.text = "";
+        useArray = false;
 
         typingCoroutine = StartCoroutine(TypewriterSequence(delay));
     }
 
-    public void StartTypewriter()
+    public void ChangeText(string[] textArray, float delay = 0)
     {
-        ChangeText(story, delayToStart);
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        stories = textArray;
+        text.text = "";
+        useArray = true;
+
+        typingCoroutine = StartCoroutine(TypewriterSequence(delay));
     }
 
     IEnumerator TypewriterSequence(float delay)
@@ -131,13 +149,43 @@ public class UITextTypewriter : MonoBehaviour
 
         do
         {
-            text.text = "";
-            yield return StartCoroutine(PlayText());
+            if (useArray)
+            {
+                // Fallback to text component content if array is empty
+                if (stories == null || stories.Length == 0)
+                {
+                    story = text.text;
+                    text.text = "";
+                    yield return StartCoroutine(PlayText());
+                }
+                else
+                {
+                    for (int i = 0; i < stories.Length; i++)
+                    {
+                        story = stories[i];
+                        text.text = "";
+                        yield return StartCoroutine(PlayText());
+
+                        // Wait between array elements, but don't wait after the last one if autoRepeat is false
+                        if (i < stories.Length - 1)
+                        {
+                            yield return new WaitForSeconds(delayBetweenStories);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                text.text = "";
+                yield return StartCoroutine(PlayText());
+            }
 
             if (autoRepeat)
                 yield return new WaitForSeconds(autoRepeatDelay);
 
         } while (autoRepeat);
+
+        typingCoroutine = null;
     }
 
     IEnumerator PlayText()
@@ -215,8 +263,6 @@ public class UITextTypewriter : MonoBehaviour
         // Strip the trailing cursor once finished
         if (trailingChar.Length > 0 && text.text.Length >= trailingChar.Length)
             text.text = text.text[..^trailingChar.Length];
-
-        typingCoroutine = null;
     }
 
     private string GetNextChunk(string source, int index, out int nextIndex)
@@ -318,10 +364,14 @@ public class UITextTypewriterEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("text"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("playOnEnable"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("autoRepeat"));
+
         if (serializedObject.FindProperty("autoRepeat").boolValue)
         {
+            EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(serializedObject.FindProperty("autoRepeatDelay"));
+            EditorGUI.indentLevel--;
         }
+
         EditorGUILayout.PropertyField(serializedObject.FindProperty("delayToStart"));
 
         EditorGUILayout.Space();
@@ -350,7 +400,21 @@ public class UITextTypewriterEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("delayAfterPunctuation"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("trailingChar"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("story"));
+
+        EditorGUILayout.Space();
+
+        // Draw the new Stories Array
+        SerializedProperty storiesProp = serializedObject.FindProperty("stories");
+        EditorGUILayout.PropertyField(storiesProp, true);
+
+        // Only show delayBetweenStories if there is more than 1 element in the array
+        if (storiesProp.arraySize > 1)
+        {
+            EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("delayBetweenStories"));
+            EditorGUI.indentLevel--;
+        }
+
         EditorGUILayout.PropertyField(serializedObject.FindProperty("skipRichTextTags"));
 
         EditorGUILayout.Space();
@@ -360,8 +424,10 @@ public class UITextTypewriterEditor : Editor
 
         if (serializedObject.FindProperty("useAudio").boolValue)
         {
+            EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(serializedObject.FindProperty("volume"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("AudioTypping"));
+            EditorGUI.indentLevel--;
         }
 
         serializedObject.ApplyModifiedProperties();
