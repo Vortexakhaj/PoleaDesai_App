@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -12,14 +14,17 @@ public enum TypingMode { Characters, Words, Lines, Paragraphs }
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class UITextTypewriter : MonoBehaviour
 {
+    public UnityEvent onTypingComplete;
+
     [Header("Typing Settings")]
     public TextMeshProUGUI text;
     public bool playOnEnable = true;
     public bool autoRepeat = false;
     public float autoRepeatDelay = 2f;
     public float delayToStart = 0f;
+    public float delayToEnd = 0f;
 
-    [Tooltip("Characters = type letter by letter.\nWords = type word by word.\nLines = type line by line.\nParagraphs = type paragraph by paragraph.")]
+    [Tooltip("Characters = type letter by letter.\nWords = type word by word.\nLines = type line by line (respects visual wrapping).\nParagraphs = type paragraph by paragraph.")]
     public TypingMode typingMode = TypingMode.Characters;
 
     [Tooltip("Delay between characters.")]
@@ -43,8 +48,11 @@ public class UITextTypewriter : MonoBehaviour
     [Tooltip("Delay between each text block in the array.")]
     public float delayBetweenStories = 1.5f;
 
-    [Tooltip("If true, rich text tags (e.g. <b>, <color=red>, </color>) are added instantly instead of typed out.")]
+    [Tooltip("If true, rich text tags are applied instantly. (Note: This is now handled natively by TMP's color tag system).")]
     public bool skipRichTextTags = true;
+
+    // --- PAUSE SYSTEM ---
+    [HideInInspector] public bool isPaused = false;
 
     private bool lastCharPunctuation = false;
     private char charComma;
@@ -64,7 +72,18 @@ public class UITextTypewriter : MonoBehaviour
     public GameObject AudioTypping;
     private AudioSource TyppingFX;
 
-    // Helper property to dynamically get the correct delay based on the current Inspector mode
+    // Custom wait method that respects the pause flag (because standard WaitForSeconds cannot be paused)
+    private IEnumerator WaitWithPause(float delay)
+    {
+        float timer = 0f;
+        while (timer < delay)
+        {
+            if (!isPaused)
+                timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+
     private float GetCurrentDelay()
     {
         switch (typingMode)
@@ -94,6 +113,7 @@ public class UITextTypewriter : MonoBehaviour
 
     private void OnEnable()
     {
+        isPaused = false; // Reset pause state when object is re-enabled
         if (playOnEnable)
         {
             StartTypewriter();
@@ -115,47 +135,43 @@ public class UITextTypewriter : MonoBehaviour
             StopCoroutine(typingCoroutine);
 
         useArray = true;
-        typingCoroutine = StartCoroutine(TypewriterSequence(delayToStart));
+        typingCoroutine = StartCoroutine(TypewriterSequence(delayToStart, delayToEnd));
     }
 
-    public void ChangeText(string textContent, float delay = 0)
+    public void ChangeText(string textContent, float delay = 0, float delayToEnd = 0)
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
         story = textContent;
-        text.text = "";
         useArray = false;
 
-        typingCoroutine = StartCoroutine(TypewriterSequence(delay));
+        typingCoroutine = StartCoroutine(TypewriterSequence(delay, delayToEnd));
     }
 
-    public void ChangeText(string[] textArray, float delay = 0)
+    public void ChangeText(string[] textArray, float delay = 0, float delayToEnd = 0)
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
         stories = textArray;
-        text.text = "";
         useArray = true;
 
-        typingCoroutine = StartCoroutine(TypewriterSequence(delay));
+        typingCoroutine = StartCoroutine(TypewriterSequence(delay, delayToEnd));
     }
 
-    IEnumerator TypewriterSequence(float delay)
+    IEnumerator TypewriterSequence(float delay, float delayEnd)
     {
         if (delay > 0f)
-            yield return new WaitForSeconds(delay);
+            yield return StartCoroutine(WaitWithPause(delay));
 
         do
         {
             if (useArray)
             {
-                // Fallback to text component content if array is empty
                 if (stories == null || stories.Length == 0)
                 {
                     story = text.text;
-                    text.text = "";
                     yield return StartCoroutine(PlayText());
                 }
                 else
@@ -163,69 +179,133 @@ public class UITextTypewriter : MonoBehaviour
                     for (int i = 0; i < stories.Length; i++)
                     {
                         story = stories[i];
-                        text.text = "";
                         yield return StartCoroutine(PlayText());
 
-                        // Wait between array elements, but don't wait after the last one if autoRepeat is false
                         if (i < stories.Length - 1)
                         {
-                            yield return new WaitForSeconds(delayBetweenStories);
+                            yield return StartCoroutine(WaitWithPause(delayBetweenStories));
                         }
                     }
                 }
             }
             else
             {
-                text.text = "";
                 yield return StartCoroutine(PlayText());
             }
 
             if (autoRepeat)
-                yield return new WaitForSeconds(autoRepeatDelay);
+                yield return StartCoroutine(WaitWithPause(autoRepeatDelay));
 
         } while (autoRepeat);
 
         typingCoroutine = null;
+
+        if (delayEnd > 0f)
+            yield return StartCoroutine(WaitWithPause(delayEnd));
+
+        onTypingComplete?.Invoke();
     }
 
     IEnumerator PlayText()
     {
-        int i = 0;
-        while (i < story.Length)
+        // Set the full text first so TextMeshPro calculates the correct visual layout and line breaks
+        text.text = story;
+        text.ForceMeshUpdate();
+
+        int totalVisibleChars = text.textInfo.characterCount;
+
+        // Cache character info so we don't rely on textInfo after we start modifying text.text
+        TMP_CharacterInfo[] charInfos = new TMP_CharacterInfo[totalVisibleChars];
+        if (totalVisibleChars > 0)
         {
-            // Extract the next chunk of text based on the typing mode
-            string chunk = GetNextChunk(story, i, out int nextIndex);
-            i = nextIndex;
+            Array.Copy(text.textInfo.characterInfo, charInfos, totalVisibleChars);
+        }
 
-            if (string.IsNullOrEmpty(chunk))
-                continue;
+        // Cache visual line end indices based on TMP's word wrapping
+        List<int> lineEndVisIndices = new List<int>();
+        for (int i = 0; i < text.textInfo.lineCount; i++)
+        {
+            int lastVisIdx = text.textInfo.lineInfo[i].lastVisibleCharacterIndex + 1;
+            if (lastVisIdx <= 0) lastVisIdx = 1;
+            lineEndVisIndices.Add(lastVisIdx);
+        }
 
-            // Check if the chunk is purely a rich text tag (ignoring trailing spaces)
-            string trimmedChunk = chunk.Trim();
-            bool isPureTag = skipRichTextTags && trimmedChunk.StartsWith("<") && trimmedChunk.EndsWith(">");
+        int currentVisIndex = 0;
+        int currentLine = 0;
 
-            if (isPureTag)
-            {
-                // Append the tag instantly without audio, delay, or trailing char flicker
-                if (trailingChar.Length > 0 && text.text.Length >= trailingChar.Length)
-                    text.text = text.text[..^trailingChar.Length];
+        while (currentVisIndex < totalVisibleChars)
+        {
+            // Cleanly freeze the typing loop entirely if paused using WaitWhile
+            yield return new WaitWhile(() => isPaused);
 
-                text.text += chunk;
-                text.text += trailingChar;
-                continue;
-            }
-
-            // --- Handle visible text chunks ---
-
+            // Wait for punctuation delay from the PREVIOUS chunk
             if (lastCharPunctuation)
             {
                 if (useAudio && TyppingFX != null) TyppingFX.Pause();
-                yield return new WaitForSeconds(delayAfterPunctuation);
+                yield return StartCoroutine(WaitWithPause(delayAfterPunctuation));
                 lastCharPunctuation = false;
             }
 
+            // Determine target visible index
+            int targetVisIndex = currentVisIndex;
+
+            switch (typingMode)
+            {
+                case TypingMode.Characters:
+                    targetVisIndex = currentVisIndex + 1;
+                    break;
+                case TypingMode.Words:
+                    targetVisIndex = GetEndOfWordIndex(currentVisIndex, charInfos);
+                    break;
+                case TypingMode.Lines:
+                    if (currentLine < lineEndVisIndices.Count)
+                    {
+                        targetVisIndex = lineEndVisIndices[currentLine];
+                        currentLine++;
+                    }
+                    else
+                    {
+                        targetVisIndex = totalVisibleChars;
+                    }
+                    // Prevent infinite loop if line is empty or we are already past it
+                    if (targetVisIndex <= currentVisIndex) targetVisIndex = currentVisIndex + 1;
+                    break;
+                case TypingMode.Paragraphs:
+                    targetVisIndex = GetEndOfParagraphIndex(currentVisIndex, charInfos);
+                    break;
+            }
+
+            // Determine target string index from the visible character index
+            int targetStringIndex = story.Length;
+            if (targetVisIndex > 0 && targetVisIndex <= totalVisibleChars)
+            {
+                targetStringIndex = charInfos[targetVisIndex - 1].index + 1;
+            }
+            else if (targetVisIndex == 0)
+            {
+                targetStringIndex = 0;
+            }
+
+            // Update Text Component
+            string visiblePart = story.Substring(0, targetStringIndex);
+            string hiddenPart = story.Substring(targetStringIndex);
+
+            // Hide the un-typed part by making it transparent. This preserves layout and rich text tags flawlessly!
+            if (string.IsNullOrEmpty(trailingChar))
+            {
+                text.text = visiblePart + "<color=#00000000>" + hiddenPart + "</color>";
+            }
+            else
+            {
+                text.text = visiblePart + trailingChar + "<color=#00000000>" + hiddenPart + "</color>";
+            }
+
+            // Play audio for the chunk
+            if (useAudio && TyppingFX != null && TyppingFX.clip != null)
+                TyppingFX.PlayOneShot(TyppingFX.clip, volume);
+
             // Check punctuation to trigger delay for the NEXT chunk
-            char lastVisibleChar = GetLastVisibleChar(chunk);
+            char lastVisibleChar = charInfos[targetVisIndex - 1].character;
             bool isPunctuation = false;
 
             if (typingMode == TypingMode.Characters)
@@ -241,112 +321,58 @@ public class UITextTypewriter : MonoBehaviour
 
             if (isPunctuation)
             {
-                if (useAudio && TyppingFX != null) TyppingFX.Pause();
                 lastCharPunctuation = true;
             }
 
-            // Play audio once per chunk
-            if (useAudio && TyppingFX != null && TyppingFX.clip != null)
-                TyppingFX.PlayOneShot(TyppingFX.clip, volume);
+            currentVisIndex = targetVisIndex;
 
-            // Update text component
-            if (trailingChar.Length > 0 && text.text.Length >= trailingChar.Length)
-                text.text = text.text[..^trailingChar.Length];
-
-            text.text += chunk;
-            text.text += trailingChar;
-
-            // Dynamically fetch the correct delay based on the current mode
-            yield return new WaitForSeconds(GetCurrentDelay());
+            yield return StartCoroutine(WaitWithPause(GetCurrentDelay()));
         }
 
-        // Strip the trailing cursor once finished
-        if (trailingChar.Length > 0 && text.text.Length >= trailingChar.Length)
-            text.text = text.text[..^trailingChar.Length];
+        // Strip the trailing cursor and reveal the final clean string
+        text.text = story;
+        text.ForceMeshUpdate();
     }
 
-    private string GetNextChunk(string source, int index, out int nextIndex)
+    private int GetEndOfWordIndex(int startIndex, TMP_CharacterInfo[] charInfos)
     {
-        // --- Characters ---
-        if (typingMode == TypingMode.Characters)
+        int index = startIndex;
+        int charCount = charInfos.Length;
+
+        // Skip current word
+        while (index < charCount && !char.IsWhiteSpace(charInfos[index].character))
         {
-            if (skipRichTextTags && source[index] == '<')
-            {
-                int close = source.IndexOf('>', index);
-                if (close != -1)
-                {
-                    nextIndex = close + 1;
-                    return source.Substring(index, close - index + 1);
-                }
-            }
-            nextIndex = index + 1;
-            return source.Substring(index, 1);
-        }
-
-        // --- Words, Lines, or Paragraphs ---
-        int start = index;
-        while (index < source.Length)
-        {
-            // Consume Rich Text tags entirely within the chunk
-            if (skipRichTextTags && source[index] == '<')
-            {
-                int close = source.IndexOf('>', index);
-                if (close != -1)
-                {
-                    index = close + 1;
-                    continue;
-                }
-            }
-
-            // Words: Break on any whitespace (including newlines)
-            if (typingMode == TypingMode.Words && char.IsWhiteSpace(source[index]))
-            {
-                index++;
-                break;
-            }
-
-            // Lines: Break on a single newline
-            if (typingMode == TypingMode.Lines && (source[index] == '\n' || source[index] == '\r'))
-            {
-                // Consume \r\n or \n
-                if (source[index] == '\r' && index + 1 < source.Length && source[index + 1] == '\n')
-                    index += 2;
-                else
-                    index++;
-                break;
-            }
-
-            // Paragraphs: Break and consume ALL consecutive newlines
-            if (typingMode == TypingMode.Paragraphs && (source[index] == '\n' || source[index] == '\r'))
-            {
-                while (index < source.Length && (source[index] == '\n' || source[index] == '\r'))
-                    index++;
-                break;
-            }
-
             index++;
         }
-
-        nextIndex = index;
-        return source.Substring(start, index - start);
+        // Skip whitespace to next word
+        while (index < charCount && char.IsWhiteSpace(charInfos[index].character))
+        {
+            index++;
+        }
+        return index;
     }
 
-    private char GetLastVisibleChar(string chunk)
+    private int GetEndOfParagraphIndex(int startIndex, TMP_CharacterInfo[] charInfos)
     {
-        for (int j = chunk.Length - 1; j >= 0; j--)
+        int index = startIndex;
+        int charCount = charInfos.Length;
+
+        while (index < charCount)
         {
-            if (skipRichTextTags && chunk[j] == '>')
+            char c = charInfos[index].character;
+            if (c == '\n' || c == '\r')
             {
-                int startTag = chunk.LastIndexOf('<', j);
-                if (startTag != -1)
+                index++;
+                // Consume consecutive newlines
+                while (index < charCount && (charInfos[index].character == '\n' || charInfos[index].character == '\r'))
                 {
-                    j = startTag;
-                    continue;
+                    index++;
                 }
+                break;
             }
-            return chunk[j];
+            index++;
         }
-        return charEmpty;
+        return index;
     }
 }
 
@@ -361,6 +387,11 @@ public class UITextTypewriterEditor : Editor
     {
         serializedObject.Update();
 
+        if (!serializedObject.FindProperty("autoRepeat").boolValue)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("onTypingComplete"));
+        }
+
         EditorGUILayout.PropertyField(serializedObject.FindProperty("text"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("playOnEnable"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("autoRepeat"));
@@ -373,6 +404,7 @@ public class UITextTypewriterEditor : Editor
         }
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("delayToStart"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("delayToEnd"));
 
         EditorGUILayout.Space();
 
@@ -381,7 +413,6 @@ public class UITextTypewriterEditor : Editor
 
         TypingMode currentMode = (TypingMode)modeProp.enumValueIndex;
 
-        // Conditionally draw the delay variables based on the enum selection
         switch (currentMode)
         {
             case TypingMode.Characters:
@@ -403,11 +434,9 @@ public class UITextTypewriterEditor : Editor
 
         EditorGUILayout.Space();
 
-        // Draw the new Stories Array
         SerializedProperty storiesProp = serializedObject.FindProperty("stories");
         EditorGUILayout.PropertyField(storiesProp, true);
 
-        // Only show delayBetweenStories if there is more than 1 element in the array
         if (storiesProp.arraySize > 1)
         {
             EditorGUI.indentLevel++;
