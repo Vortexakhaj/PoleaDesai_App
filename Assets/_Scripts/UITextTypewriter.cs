@@ -106,6 +106,13 @@ public class UITextTypewriter : MonoBehaviour
 
         text = GetComponent<TextMeshProUGUI>();
 
+        if (stories == null || stories.Length == 0)
+        {
+            useArray = false;
+            stories = new string[1];
+            stories[0] = text.text;
+        }
+
         charComma = Convert.ToChar(44);
         charPeriod = Convert.ToChar(46);
         charEmpty = Convert.ToChar(" ");
@@ -133,8 +140,6 @@ public class UITextTypewriter : MonoBehaviour
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
-
-        useArray = true;
         typingCoroutine = StartCoroutine(TypewriterSequence(delayToStart, delayToEnd));
     }
 
@@ -169,27 +174,20 @@ public class UITextTypewriter : MonoBehaviour
         {
             if (useArray)
             {
-                if (stories == null || stories.Length == 0)
+                for (int i = 0; i < stories.Length; i++)
                 {
-                    story = text.text;
+                    story = stories[i];
                     yield return StartCoroutine(PlayText());
-                }
-                else
-                {
-                    for (int i = 0; i < stories.Length; i++)
-                    {
-                        story = stories[i];
-                        yield return StartCoroutine(PlayText());
 
-                        if (i < stories.Length - 1)
-                        {
-                            yield return StartCoroutine(WaitWithPause(delayBetweenStories));
-                        }
+                    if (i < stories.Length - 1)
+                    {
+                        yield return StartCoroutine(WaitWithPause(delayBetweenStories));
                     }
                 }
             }
             else
             {
+                story = stories[0];
                 yield return StartCoroutine(PlayText());
             }
 
