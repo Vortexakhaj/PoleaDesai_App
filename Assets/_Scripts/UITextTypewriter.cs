@@ -206,6 +206,9 @@ public class UITextTypewriter : MonoBehaviour
 
     IEnumerator PlayText()
     {
+        // Hook for derived classes (e.g., disabling objects before typing starts)
+        OnTypingStart();
+
         // Set the full text first so TextMeshPro calculates the correct visual layout and line breaks
         text.text = story;
         text.ForceMeshUpdate();
@@ -227,6 +230,12 @@ public class UITextTypewriter : MonoBehaviour
             if (lastVisIdx <= 0) lastVisIdx = 1;
             lineEndVisIndices.Add(lastVisIdx);
         }
+
+        // --- FIX: Hide the text IMMEDIATELY before the first yield to prevent 1-frame flash ---
+        if (!string.IsNullOrEmpty(trailingChar))
+            text.text = trailingChar + "<color=#00000000>" + story + "</color>";
+        else
+            text.text = "<color=#00000000>" + story + "</color>";
 
         int currentVisIndex = 0;
         int currentLine = 0;
@@ -297,6 +306,9 @@ public class UITextTypewriter : MonoBehaviour
             {
                 text.text = visiblePart + trailingChar + "<color=#00000000>" + hiddenPart + "</color>";
             }
+
+            // Hook for derived classes (e.g., enabling objects as words are typed)
+            OnChunkTyped(visiblePart);
 
             // Play audio for the chunk
             if (useAudio && TyppingFX != null && TyppingFX.clip != null)
@@ -372,6 +384,8 @@ public class UITextTypewriter : MonoBehaviour
         }
         return index;
     }
+    protected virtual void OnTypingStart() { }
+    protected virtual void OnChunkTyped(string visibleText) { }
 }
 
 // =========================================================================================

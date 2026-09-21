@@ -1531,7 +1531,7 @@ MonoBehaviour:
   delayToStart: 0
   delayToEnd: 5
   typingMode: 0
-  delayBetweenChars: 0.08
+  delayBetweenChars: 0.01
   delayBetweenWords: 0.001
   delayBetweenLines: 0.03
   delayBetweenParagraphs: 0.5
@@ -1666,7 +1666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &152799083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 436628e5f95d63d479be3a47ce2dffe1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d4b0d778ea844a489169894350c66a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4334,7 +4334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228, y: 1218}
+  m_AnchoredPosition: {x: 225, y: 1340}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323808670
@@ -8718,7 +8718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &594039234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8843,8 +8843,9 @@ GameObject:
   - component: {fileID: 598976386}
   - component: {fileID: 598976385}
   - component: {fileID: 598976387}
+  - component: {fileID: 598976388}
   m_Layer: 0
-  m_Name: Chicken
+  m_Name: aalo boti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8924,6 +8925,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &598976388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598976383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &600911345
 GameObject:
   m_ObjectHideFlags: 0
@@ -9225,19 +9298,13 @@ MonoBehaviour:
   delayToStart: 0
   delayToEnd: 0
   typingMode: 0
-  delayBetweenChars: 0.08
+  delayBetweenChars: 0.01
   delayBetweenWords: 0.001
   delayBetweenLines: 0.3
   delayBetweenParagraphs: 0.5
   delayAfterPunctuation: 0
   trailingChar: 
-  stories:
-  - Freny arrives with her children, Zubin and Delnaz at the <i>Maidyarem Gahambar</i>
-    in Mumbai - one of the six sacred seasonal festivals in the Zoroastrian calendar,
-    celebrated during the mid-winter solstice.
-  - "She spots everyone she hasn\u2019t seen in months: neighbors, family friends,
-    and familiar faces from years gone by. Everyone sits together in long rows, sharing
-    the exact same meal."
+  stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
   isPaused: 0
@@ -11503,8 +11570,9 @@ GameObject:
   - component: {fileID: 765642222}
   - component: {fileID: 765642221}
   - component: {fileID: 765642223}
+  - component: {fileID: 765642224}
   m_Layer: 0
-  m_Name: Roti
+  m_Name: roti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11584,6 +11652,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &765642224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765642219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &772588264
 GameObject:
   m_ObjectHideFlags: 0
@@ -14557,7 +14697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: 1316}
+  m_AnchoredPosition: {x: 26, y: 1438}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999217074
@@ -14857,6 +14997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1029847460}
+  - component: {fileID: 1029847464}
   - component: {fileID: 1029847461}
   m_Layer: 0
   m_Name: Frame2
@@ -14898,9 +15039,90 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 2053689800}
+  typewriter: {fileID: 2053689803}
   playPauseButton: {fileID: 0}
   buttonText: {fileID: 0}
+--- !u!114 &1029847464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029847459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 8a39244e803d75945ad471ddb0f34dd2, type: 2}
+    - {fileID: 11400000, guid: ca668b1912c0d344aa04e551317d7cfc, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1029847461}
+          m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
+          m_MethodName: PauseTimeline
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2053689798}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2053689803}
+          m_TargetAssemblyTypeName: UITextTypewriter, Assembly-CSharp
+          m_MethodName: StartTypewriter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2053689798}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2053689803}
+          m_TargetAssemblyTypeName: UITextTypewriterObjectEnabler, Assembly-CSharp
+          m_MethodName: DisableAllObjects
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1034127850
 GameObject:
   m_ObjectHideFlags: 0
@@ -16534,8 +16756,9 @@ GameObject:
   - component: {fileID: 1155752764}
   - component: {fileID: 1155752763}
   - component: {fileID: 1155752765}
+  - component: {fileID: 1155752766}
   m_Layer: 0
-  m_Name: Pickle
+  m_Name: gajar mewa nu achar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16615,6 +16838,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &1155752766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155752761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1161424571
 GameObject:
   m_ObjectHideFlags: 0
@@ -16800,8 +17095,9 @@ GameObject:
   - component: {fileID: 1172687708}
   - component: {fileID: 1172687707}
   - component: {fileID: 1172687709}
+  - component: {fileID: 1172687710}
   m_Layer: 0
-  m_Name: Patra ni Macchi
+  m_Name: patra ni machi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16881,6 +17177,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &1172687710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172687705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1191223346
 GameObject:
   m_ObjectHideFlags: 0
@@ -17594,8 +17962,9 @@ GameObject:
   - component: {fileID: 1246929702}
   - component: {fileID: 1246929701}
   - component: {fileID: 1246929703}
+  - component: {fileID: 1246929704}
   m_Layer: 0
-  m_Name: Fryums
+  m_Name: saria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17675,6 +18044,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &1246929704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246929699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1287892679
 GameObject:
   m_ObjectHideFlags: 0
@@ -17784,7 +18225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 964, y: 1248}
+  m_AnchoredPosition: {x: 962, y: 1322}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303472678
@@ -18529,7 +18970,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382606498}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4094a9ed5176dd34294e51ebb9bb4f99, type: 3}
   m_Name: 
@@ -18540,9 +18981,10 @@ MonoBehaviour:
     - {fileID: -821706759, guid: 356e5c8ad86a63540b2aa7dc9c4da8a0, type: 3}
     - {fileID: 1532746439, guid: 356e5c8ad86a63540b2aa7dc9c4da8a0, type: 3}
     - {fileID: -2017360019, guid: 356e5c8ad86a63540b2aa7dc9c4da8a0, type: 3}
+    - {fileID: 1532746439, guid: 356e5c8ad86a63540b2aa7dc9c4da8a0, type: 3}
     frameRate: 2
-    loop: 0
-  defaultState: 
+    loop: 1
+  defaultState: Default
   transitions: []
   playOnAwake: 1
   preserveAspect: 1
@@ -22163,8 +22605,9 @@ GameObject:
   - component: {fileID: 1611243769}
   - component: {fileID: 1611243768}
   - component: {fileID: 1611243770}
+  - component: {fileID: 1611243771}
   m_Layer: 0
-  m_Name: Bhaji Dana
+  m_Name: bhaji dana ma gosht
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22244,6 +22687,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &1611243771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611243766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1617289206
 GameObject:
   m_ObjectHideFlags: 0
@@ -24232,7 +24747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1788459722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25371,8 +25886,9 @@ GameObject:
   - component: {fileID: 1841597476}
   - component: {fileID: 1841597475}
   - component: {fileID: 1841597477}
+  - component: {fileID: 1841597478}
   m_Layer: 0
-  m_Name: Rice
+  m_Name: pulao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25452,6 +25968,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &1841597478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841597473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1846094973
 GameObject:
   m_ObjectHideFlags: 0
@@ -26893,7 +27481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177, y: 1223}
+  m_AnchoredPosition: {x: -180, y: 1345}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950796756
@@ -27819,7 +28407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1130, y: 1344}
+  m_AnchoredPosition: {x: -1131, y: 1374}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035585866
@@ -28196,7 +28784,7 @@ GameObject:
   - component: {fileID: 2053689799}
   - component: {fileID: 2053689802}
   - component: {fileID: 2053689801}
-  - component: {fileID: 2053689800}
+  - component: {fileID: 2053689803}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -28223,41 +28811,6 @@ RectTransform:
   m_AnchoredPosition: {x: 37, y: 1008.27124}
   m_SizeDelta: {x: 1338.5828, y: 359.5836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2053689800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053689798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb035a978ca291448a462fd9ec8d26d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onTypingComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  text: {fileID: 2053689801}
-  playOnEnable: 1
-  autoRepeat: 0
-  autoRepeatDelay: 2
-  delayToStart: 0
-  delayToEnd: 0
-  typingMode: 0
-  delayBetweenChars: 0.08
-  delayBetweenWords: 0.001
-  delayBetweenLines: 0.3
-  delayBetweenParagraphs: 0.5
-  delayAfterPunctuation: 0
-  trailingChar: 
-  stories: []
-  delayBetweenStories: 5
-  skipRichTextTags: 1
-  isPaused: 0
-  useAudio: 0
-  volume: 0.3
-  AudioTypping: {fileID: 0}
 --- !u!114 &2053689801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28279,9 +28832,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "As she and her children take their places at the long table,\nthe Gahambar
-    food fills her plate: <i>saria, gajar mewa nu \nachar, rotli, custard, and patra
-    ni machi</i>.\r\n\r\nBut the moment her favorite <i>bhaji dana ma gosht</i> is
-    served,\nshe tells her children.\r"
+    food fills her plate: <i>saria, gajar mewa nu\nachar, roti, aalo boti, pulao,
+    custard, and patra ni machi</i>.\r\n\r\nBut the moment her favorite <i>bhaji
+    dana ma gosht</i> is served,\nshe tells her children.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
   m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
@@ -28358,6 +28911,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053689798}
   m_CullTransparentMesh: 1
+--- !u!114 &2053689803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053689798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f329bba9288594588458b830d8ffb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTypingComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1029847461}
+        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
+        m_MethodName: OnTypewriterFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  text: {fileID: 2053689801}
+  playOnEnable: 0
+  autoRepeat: 0
+  autoRepeatDelay: 2
+  delayToStart: 0
+  delayToEnd: 5
+  typingMode: 0
+  delayBetweenChars: 0.04
+  delayBetweenWords: 0.15
+  delayBetweenLines: 0.3
+  delayBetweenParagraphs: 0.5
+  delayAfterPunctuation: 0
+  trailingChar: 
+  stories: []
+  delayBetweenStories: 1.5
+  skipRichTextTags: 1
+  isPaused: 0
+  useAudio: 0
+  volume: 0.3
+  AudioTypping: {fileID: 0}
+  objectLinks:
+  - triggerPhrase: saria
+    targetObject: {fileID: 1246929699}
+  - triggerPhrase: gajar mewa nu achar
+    targetObject: {fileID: 1155752761}
+  - triggerPhrase: roti
+    targetObject: {fileID: 765642219}
+  - triggerPhrase: pulao
+    targetObject: {fileID: 1841597473}
+  - triggerPhrase: aalo boti
+    targetObject: {fileID: 598976383}
+  - triggerPhrase: custard
+    targetObject: {fileID: 2135544271}
+  - triggerPhrase: patra ni machi
+    targetObject: {fileID: 1172687705}
+  - triggerPhrase: bhaji dana ma gosht
+    targetObject: {fileID: 1611243766}
 --- !u!1 &2058158793
 GameObject:
   m_ObjectHideFlags: 0
@@ -28651,7 +29268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.54}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -931, y: 1246}
+  m_AnchoredPosition: {x: -932, y: 1276}
   m_SizeDelta: {x: 155.25, y: 445.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108187245
@@ -29549,8 +30166,9 @@ GameObject:
   - component: {fileID: 2135544274}
   - component: {fileID: 2135544273}
   - component: {fileID: 2135544275}
+  - component: {fileID: 2135544276}
   m_Layer: 0
-  m_Name: Custard_1
+  m_Name: custard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29630,6 +30248,78 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 20
   shadowSpread: {x: 6.07, y: 10}
+--- !u!114 &2135544276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135544271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1caa86e2d76f6b468c270766bea030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isLoop: 0
+  playAtAwake: 1
+  isUniform: 1
+  delayeventby: 0
+  tweenEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tweenBackwardEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2139810842
 GameObject:
   m_ObjectHideFlags: 0
