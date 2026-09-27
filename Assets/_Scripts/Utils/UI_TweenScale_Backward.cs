@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UI_Tween : MonoBehaviour
+public class UI_TweenScale_Backward : MonoBehaviour
 {
     [Flags]
     public enum TweenType

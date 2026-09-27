@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Idle animation (float, sway, squash & stretch, wobble).
+/// If a UIHorizontalWanderer is on the same object, this layers ON TOP of it
+/// (runs in LateUpdate, after the wanderer has moved things).
+/// Works standalone too — just falls back to the editor pose as the base.
+/// </summary>
 public class CloudFloatJiggle : MonoBehaviour
 {
     public enum CloudPreset
@@ -35,9 +41,13 @@ public class CloudFloatJiggle : MonoBehaviour
     [SerializeField] private bool randomPhase = true;
     [SerializeField] private float phaseOffset = 0f;
 
+    [Tooltip("Keep in sync with the wanderer's 'Use Unscaled Time' setting.")]
+    [SerializeField] private bool useUnscaledTime = false;
+
     private Vector3 _startPosition;
     private Vector3 _startScale;
     private float _phase;
+    private UIHorizontalWanderer _wanderer;
 
     // Tracking variable to detect when the dropdown changes in the Inspector
     private CloudPreset _lastPreset;
@@ -47,44 +57,53 @@ public class CloudFloatJiggle : MonoBehaviour
         _startPosition = transform.localPosition;
         _startScale = transform.localScale;
         _phase = randomPhase ? Random.Range(0f, Mathf.PI * 2f) : phaseOffset;
+        _wanderer = GetComponent<UIHorizontalWanderer>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        float t = Time.time + _phase;
+        float t = (useUnscaledTime ? Time.unscaledTime : Time.time) + _phase;
 
-        // --- Position: float + sway ---
+        // Base transform: whatever the wanderer last wrote, or the editor pose
+        // if this object isn't travelling.
+        Vector3 basePos = _wanderer != null ? _wanderer.BaseLocalPosition : _startPosition;
+        Vector3 baseScale = _wanderer != null ? _wanderer.BaseLocalScale : _startScale;
+
+        // --- Position: float + sway, added on top of the base ---
         float xOffset = Mathf.Sin(t * swaySpeed) * swayAmplitude;
         float yOffset = Mathf.Sin(t * floatSpeed) * floatAmplitude;
-        transform.localPosition = _startPosition + new Vector3(xOffset, yOffset, 0f);
+        transform.localPosition = basePos + new Vector3(xOffset, yOffset, 0f);
 
-        // --- Scale: jelly-like squash & stretch ---
-        // X and Y are opposite phase so total area feels preserved.
+        // --- Scale: jelly-like squash & stretch around the base scale ---
+        // (Base scale includes the wanderer's direction flip, so flipping still works.)
         float jiggle = Mathf.Sin(t * jiggleSpeed) * jiggleAmount;
         transform.localScale = new Vector3(
-            _startScale.x * (1f + jiggle),
-            _startScale.y * (1f - jiggle),
-            _startScale.z
+            baseScale.x * (1f + jiggle),
+            baseScale.y * (1f - jiggle),
+            baseScale.z
         );
 
-        // --- Rotation: gentle wobble ---
+        // --- Rotation: gentle wobble (wanderer never touches rotation) ---
         float rotZ = Mathf.Sin(t * rotationSpeed) * rotationAmplitude;
         transform.localRotation = Quaternion.Euler(0f, 0f, rotZ);
     }
 
     private void OnDisable()
     {
-        // Prevent visual "jump" if the object is re-enabled later.
-        transform.localPosition = _startPosition;
-        transform.localScale = _startScale;
-        transform.localRotation = Quaternion.identity;
+        // Only reset when standalone. When driven by the wanderer, resetting
+        // here would yank the cloud back to its editor position mid-flight.
+        // (Everything is recomputed every frame, so re-enabling never "jumps".)
+        if (_wanderer == null)
+        {
+            transform.localPosition = _startPosition;
+            transform.localScale = _startScale;
+            transform.localRotation = Quaternion.identity;
+        }
     }
 
-    // This runs in the Unity Editor whenever a value is changed in the Inspector
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        // Only apply presets if the dropdown was actually changed
         if (preset != _lastPreset)
         {
             _lastPreset = preset;
@@ -104,11 +123,10 @@ public class CloudFloatJiggle : MonoBehaviour
                     jiggleAmount = 0.08f; jiggleSpeed = 3.5f;
                     rotationAmplitude = 3f; rotationSpeed = 1.2f;
                     break;
+
                 case CloudPreset.Custom:
-                    floatAmplitude = 0.2f; floatSpeed = 1.5f;
-                    swayAmplitude = 0.1f; swaySpeed = 1f;
-                    jiggleAmount = 0.05f; jiggleSpeed = 2.0f;
-                    rotationAmplitude = 2f; rotationSpeed = 0.8f;
+                    // Does nothing on purpose — keeps the current values so you
+                    // can tweak from the last preset as a starting point.
                     break;
             }
         }
