@@ -12,6 +12,7 @@ public class UITextTypewriterObjectEnabler : UITextTypewriter
     [System.Serializable]
     public class WordObjectLink
     {
+        [TextArea(4,4)]
         [Tooltip("The group of words that must appear in the typing text to trigger the object.")]
         public string triggerPhrase;
         [Tooltip("The GameObject to activate.")]
