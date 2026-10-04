@@ -73,3 +73,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Re-include the launcher project (Unity's gitignore excludes *.csproj)
+!Launcher/Launcher.csproj
+
+# Never commit build output (Launcher/obj/ is already covered by [Oo]bj/)
+Launcher/bin/
+Launcher/obj/
