@@ -4,6 +4,9 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  contents: write   # lets GITHUB_TOKEN create the release and upload assets
+
 jobs:
   game:
     runs-on: ubuntu-latest
@@ -30,6 +33,7 @@ jobs:
           files: MyGame-windows.zip
 
   launcher:
+    needs: game
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
