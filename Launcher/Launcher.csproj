@@ -11,6 +11,6 @@
 
   <ItemGroup>
     <!-- copies your real config next to the exe on every build -->
-    <Content Include="launcher.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="launcher.json" CopyToOutputDirectory="Always" />
   </ItemGroup>
 </Project>

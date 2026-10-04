@@ -345,16 +345,27 @@ sealed class LauncherForm : Form
         }
     }
 
-    static bool WildcardMatch(string name, string pattern) // supports a single '*'
+    static bool WildcardMatch(string name, string pattern) => Glob(name, 0, pattern, 0);
+
+static bool Glob(string s, int si, string p, int pi)
+{
+    while (pi < p.Length)
     {
-        pattern = pattern.Trim();
-        int star = pattern.IndexOf('*');
-        if (star < 0) return string.Equals(name, pattern, StringComparison.OrdinalIgnoreCase);
-        string pre = pattern[..star], post = pattern[(star + 1)..];
-        return name.Length >= pre.Length + post.Length
-            && name.StartsWith(pre, StringComparison.OrdinalIgnoreCase)
-            && name.EndsWith(post, StringComparison.OrdinalIgnoreCase);
+        char pc = p[pi];
+        if (pc == '*')
+        {
+            while (pi < p.Length && p[pi] == '*') pi++;  // collapse consecutive stars
+            if (pi == p.Length) return true;             // trailing * matches the rest
+            for (int i = si; i <= s.Length; i++)         // try every split point
+                if (Glob(s, i, p, pi)) return true;
+            return false;
+        }
+        if (si >= s.Length) return false;
+        if (pc != '?' && char.ToLowerInvariant(pc) != char.ToLowerInvariant(s[si])) return false;
+        si++; pi++;
     }
+    return si == s.Length;
+}
 
     static void TryDelete(string path)        { try { if (File.Exists(path)) File.Delete(path); } catch { } }
     static void TryDeleteDirectory(string p)  { try { if (Directory.Exists(p)) Directory.Delete(p, true); } catch { } }
