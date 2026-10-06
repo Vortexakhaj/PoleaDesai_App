@@ -204,6 +204,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -666,7 +668,10 @@ RectTransform:
   - {fileID: 1488707543}
   - {fileID: 239426407}
   - {fileID: 1732739965}
+  - {fileID: 1061139003}
   - {fileID: 1687272555}
+  - {fileID: 2103556109}
+  - {fileID: 1928434388}
   - {fileID: 662697753}
   - {fileID: 350545453}
   - {fileID: 450688538}
@@ -1997,6 +2002,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -2170,10 +2177,10 @@ MonoBehaviour:
   autoRepeatDelay: 2
   delayToStart: 0
   delayToEnd: 5
-  typingMode: 0
+  typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
-  delayBetweenLines: 0.03
+  delayBetweenLines: 0.6
   delayBetweenParagraphs: 0.5
   delayAfterPunctuation: 0
   trailingChar: 
@@ -2186,6 +2193,8 @@ MonoBehaviour:
     the exact same meal."
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 1
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -2387,6 +2396,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -2906,6 +2917,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -3024,7 +3037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &152799083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4446,6 +4459,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -5102,6 +5117,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -5482,6 +5499,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -6338,6 +6357,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -6540,6 +6561,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -7529,7 +7552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &339103520
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7706,6 +7729,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -7907,6 +7932,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -8820,6 +8847,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -13048,6 +13077,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -13813,6 +13844,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -14727,6 +14760,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -15176,7 +15211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &681569623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15341,6 +15376,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -15542,6 +15579,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -18500,6 +18539,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -19305,6 +19346,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -20104,6 +20147,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -20470,6 +20515,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -21118,7 +21165,7 @@ MonoBehaviour:
   timelineDirector: {fileID: 339103520}
   typewriter: {fileID: 2053689803}
   playPauseButton: {fileID: 0}
-  buttonText: {fileID: 0}
+  buttonText: {fileID: 1670246355}
 --- !u!114 &1029847464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21473,6 +21520,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056661756}
+  m_CullTransparentMesh: 1
+--- !u!1 &1061139002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061139003}
+  - component: {fileID: 1061139005}
+  - component: {fileID: 1061139004}
+  m_Layer: 0
+  m_Name: Freny_s dad (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1061139003
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061139002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24090621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 319, y: -584}
+  m_SizeDelta: {x: 531, y: 313}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1061139004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061139002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: afc3576ffad963849a191f85aa2c2b63, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1061139005
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061139002}
   m_CullTransparentMesh: 1
 --- !u!1 &1074307972
 GameObject:
@@ -22691,6 +22813,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -24329,6 +24453,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210927790}
   m_CullTransparentMesh: 1
+--- !u!1 &1211551873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211551874}
+  - component: {fileID: 1211551877}
+  - component: {fileID: 1211551876}
+  - component: {fileID: 1211551875}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1211551874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211551873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611243767}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 360, y: 480}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1211551875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211551873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4094a9ed5176dd34294e51ebb9bb4f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - name: Default
+    frames:
+    - {fileID: -1253386241, guid: 223860e2982e7524495650d6d182a3cb, type: 3}
+    - {fileID: -1925510794, guid: 223860e2982e7524495650d6d182a3cb, type: 3}
+    - {fileID: -600592165, guid: 223860e2982e7524495650d6d182a3cb, type: 3}
+    - {fileID: -647690203, guid: 223860e2982e7524495650d6d182a3cb, type: 3}
+    frameRate: 4
+    loop: 1
+  defaultState: Default
+  transitions: []
+  playOnAwake: 1
+  preserveAspect: 1
+  currentClip:
+    name: 
+    frames: []
+    frameRate: 12
+    loop: 1
+--- !u!114 &1211551876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211551873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1253386241, guid: 223860e2982e7524495650d6d182a3cb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1211551877
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211551873}
+  m_CullTransparentMesh: 1
 --- !u!1 &1212575172
 GameObject:
   m_ObjectHideFlags: 0
@@ -25555,6 +25785,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -26548,6 +26780,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -26826,6 +27060,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -27132,6 +27368,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -28003,6 +28241,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -30252,6 +30492,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -31837,7 +32079,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1211551874}
   m_Father: {fileID: 2072847433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.201}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -33355,7 +33598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1687272555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33372,7 +33615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231, y: -601}
+  m_AnchoredPosition: {x: 231, y: -605}
   m_SizeDelta: {x: 869, y: 2081.5344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687272556
@@ -34082,7 +34325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1732739965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35796,6 +36039,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -37348,6 +37593,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -37639,6 +37886,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -37742,6 +37991,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919137978}
+  m_CullTransparentMesh: 1
+--- !u!1 &1928434387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928434388}
+  - component: {fileID: 1928434390}
+  - component: {fileID: 1928434389}
+  m_Layer: 0
+  m_Name: Freny sitting (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1928434388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928434387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9399, y: 0.9399, z: 0.9399}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24090621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 747, y: -559}
+  m_SizeDelta: {x: 71, y: 61}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1928434389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928434387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 40690933348a4bf439af033a2c78552b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1928434390
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928434387}
   m_CullTransparentMesh: 1
 --- !u!1 &1930245740
 GameObject:
@@ -38084,6 +38408,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -38605,6 +38931,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -39093,6 +39421,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -39894,6 +40224,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -40416,6 +40748,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -40828,6 +41162,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084737577}
   m_CullTransparentMesh: 1
+--- !u!1 &2103556108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103556109}
+  - component: {fileID: 2103556111}
+  - component: {fileID: 2103556110}
+  m_Layer: 0
+  m_Name: Freny sitting (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2103556109
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103556108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.94697, y: 0.94697, z: 0.94697}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24090621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 736, y: -714}
+  m_SizeDelta: {x: 147, y: 149}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2103556110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103556108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 88a2dec45c5dca748bddc201892839b0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2103556111
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103556108}
+  m_CullTransparentMesh: 1
 --- !u!224 &2106025322 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7959557023729806921, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
@@ -41117,6 +41526,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
@@ -41433,6 +41844,8 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 5
   skipRichTextTags: 1
+  useRevealFlare: 0
+  flareOffsetY: 15
   isPaused: 0
   useAudio: 0
   volume: 0.3
