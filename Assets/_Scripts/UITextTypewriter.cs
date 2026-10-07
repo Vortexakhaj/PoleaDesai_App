@@ -40,6 +40,8 @@ public class UITextTypewriter : MonoBehaviour
     public float delayBetweenParagraphs = 0.5f;
 
     public float delayAfterPunctuation = 0.5f;
+
+    [Tooltip("The character to append to the end of the text while typing (e.g. '_' or '<sprite=0>').")]
     public string trailingChar;
 
     [Tooltip("Array of text blocks to type out. If empty, defaults to the TextMeshProUGUI's current text.")]
@@ -48,7 +50,7 @@ public class UITextTypewriter : MonoBehaviour
     [Tooltip("Delay between each text block in the array.")]
     public float delayBetweenStories = 1.5f;
 
-    [Tooltip("If true, rich text tags are applied instantly. (Note: This is now handled natively by TMP's color tag system).")]
+    [Tooltip("If true, rich text tags are applied instantly. (Handled natively by TMP).")]
     public bool skipRichTextTags = true;
 
     [Header("Reveal Flare Settings")]
@@ -67,7 +69,7 @@ public class UITextTypewriter : MonoBehaviour
 
     private Coroutine typingCoroutine;
     private bool useArray = true;
-    private string story; // Internal variable for the currently playing text
+    private string story;
 
     [Header("Audio Settings")]
     [Tooltip("When true requires AudioSource on this object.")]
@@ -206,36 +208,44 @@ public class UITextTypewriter : MonoBehaviour
     {
         OnTypingStart(); // Hook for derived classes
 
-        // Set the full text first so TextMeshPro calculates the correct visual layout and line breaks
-        text.text = story;
+        // 1. Measure how many visible characters the trailing char takes
+        int cursorVisCount = 0;
+        if (!string.IsNullOrEmpty(trailingChar))
+        {
+            text.text = trailingChar;
+            text.ForceMeshUpdate();
+            cursorVisCount = text.textInfo.characterCount;
+        }
+
+        // 2. Set the full text (story + trailingChar) so TextMeshPro calculates layout natively
+        text.text = string.IsNullOrEmpty(trailingChar) ? story : story + trailingChar;
         text.ForceMeshUpdate();
 
-        int totalVisibleChars = text.textInfo.characterCount;
+        int totalChars = text.textInfo.characterCount;
+        int storyVisCount = totalChars - cursorVisCount; // The actual characters in the story
 
-        // Cache character info so we don't rely on textInfo after we start modifying text.text
-        TMP_CharacterInfo[] charInfos = new TMP_CharacterInfo[totalVisibleChars];
-        if (totalVisibleChars > 0)
-            Array.Copy(text.textInfo.characterInfo, charInfos, totalVisibleChars);
+        // 3. Cache character info ONLY for the story characters (ignores the trailing char)
+        TMP_CharacterInfo[] charInfos = new TMP_CharacterInfo[storyVisCount > 0 ? storyVisCount : 0];
+        if (storyVisCount > 0)
+            Array.Copy(text.textInfo.characterInfo, charInfos, storyVisCount);
 
-        // Cache visual line end indices based on TMP's word wrapping
+        // 4. Cache visual line end indices based on TMP's word wrapping
         List<int> lineEndVisIndices = new List<int>();
         for (int i = 0; i < text.textInfo.lineCount; i++)
         {
             int lastVisIdx = text.textInfo.lineInfo[i].lastVisibleCharacterIndex + 1;
+            if (lastVisIdx > storyVisCount) lastVisIdx = storyVisCount; // Clamp to ignore cursor
             if (lastVisIdx <= 0) lastVisIdx = 1;
             lineEndVisIndices.Add(lastVisIdx);
         }
 
-        // --- FIX: Hide the text IMMEDIATELY before the first yield to prevent 1-frame flash ---
-        if (!string.IsNullOrEmpty(trailingChar))
-            text.text = trailingChar + "<color=#00000000>" + story + "</color>";
-        else
-            text.text = "<color=#00000000>" + story + "</color>";
+        // 5. Hide everything except the trailing cursor initially
+        text.maxVisibleCharacters = cursorVisCount;
 
         int currentVisIndex = 0;
         int currentLine = 0;
 
-        while (currentVisIndex < totalVisibleChars)
+        while (currentVisIndex < storyVisCount)
         {
             yield return new WaitWhile(() => isPaused);
 
@@ -253,27 +263,23 @@ public class UITextTypewriter : MonoBehaviour
                 case TypingMode.Words: targetVisIndex = GetEndOfWordIndex(currentVisIndex, charInfos); break;
                 case TypingMode.Lines:
                     if (currentLine < lineEndVisIndices.Count) { targetVisIndex = lineEndVisIndices[currentLine]; currentLine++; }
-                    else targetVisIndex = totalVisibleChars;
+                    else targetVisIndex = storyVisCount;
                     if (targetVisIndex <= currentVisIndex) targetVisIndex = currentVisIndex + 1;
                     break;
                 case TypingMode.Paragraphs: targetVisIndex = GetEndOfParagraphIndex(currentVisIndex, charInfos); break;
             }
 
+            // Reveal the new chunk of characters + the trailing cursor
+            text.maxVisibleCharacters = targetVisIndex + cursorVisCount;
+            text.ForceMeshUpdate(); // Update mesh so flare animation can grab the new vertices
+
             int targetStringIndex = story.Length;
-            if (targetVisIndex > 0 && targetVisIndex <= totalVisibleChars)
+            if (targetVisIndex > 0 && targetVisIndex <= storyVisCount)
                 targetStringIndex = charInfos[targetVisIndex - 1].index + 1;
             else if (targetVisIndex == 0)
                 targetStringIndex = 0;
 
-            string visiblePart = story.Substring(0, targetStringIndex);
-            string hiddenPart = story.Substring(targetStringIndex);
-
-            if (string.IsNullOrEmpty(trailingChar))
-                text.text = visiblePart + "<color=#00000000>" + hiddenPart + "</color>";
-            else
-                text.text = visiblePart + trailingChar + "<color=#00000000>" + hiddenPart + "</color>";
-
-            OnChunkTyped(visiblePart); // Hook for derived classes
+            OnChunkTyped(story.Substring(0, targetStringIndex)); // Hook for derived classes
 
             if (useAudio && TyppingFX != null && TyppingFX.clip != null)
                 TyppingFX.PlayOneShot(TyppingFX.clip, volume);
@@ -300,8 +306,10 @@ public class UITextTypewriter : MonoBehaviour
             currentVisIndex = targetVisIndex;
         }
 
+        // 6. Strip the trailing cursor and reveal the final clean string
         text.text = story;
         text.ForceMeshUpdate();
+        text.maxVisibleCharacters = text.textInfo.characterCount;
     }
 
     /// <summary>
@@ -309,16 +317,13 @@ public class UITextTypewriter : MonoBehaviour
     /// </summary>
     private IEnumerator AnimateFlareAndWait(int startVisIndex, int endVisIndex, float delay)
     {
-        // If flare is disabled, delay is zero, or no new characters, just wait normally
-        if (!useRevealFlare || delay <= 0f || startVisIndex >= endVisIndex || text.textInfo.characterCount < endVisIndex)
+        if (!useRevealFlare || delay <= 0f || startVisIndex >= endVisIndex)
         {
             yield return StartCoroutine(WaitWithPause(delay));
             yield break;
         }
 
         float timer = 0f;
-        text.ForceMeshUpdate(); // Ensure mesh is ready for vertex manipulation
-
         TMP_TextInfo textInfo = text.textInfo;
         int meshInfoCount = textInfo.meshInfo.Length;
 
@@ -341,7 +346,6 @@ public class UITextTypewriter : MonoBehaviour
 
             timer += Time.deltaTime;
             float t = Mathf.Clamp01(timer / delay);
-            // Smooth Ease-Out cubic curve
             float easedT = 1f - Mathf.Pow(1f - t, 3);
 
             for (int i = 0; i < meshInfoCount; i++)
@@ -363,7 +367,6 @@ public class UITextTypewriter : MonoBehaviour
 
                     int vertexIndex = charInfo.vertexIndex;
 
-                    // Calculate slide-up offset
                     float currentOffsetY = (1f - easedT) * flareOffsetY;
                     Vector3 offset = new Vector3(0, -currentOffsetY, 0);
 
@@ -372,7 +375,7 @@ public class UITextTypewriter : MonoBehaviour
                     vertices[vertexIndex + 2] = baseVertices[i][vertexIndex + 2] + offset;
                     vertices[vertexIndex + 3] = baseVertices[i][vertexIndex + 3] + offset;
 
-                    // Calculate fade-in alpha
+                    // Calculate fade-in alpha (preserves RGB color from rich text tags)
                     byte alpha = (byte)(baseColors[i][vertexIndex].a * easedT);
                     Color32 col = baseColors[i][vertexIndex];
                     col.a = alpha;
@@ -444,9 +447,7 @@ public class UITextTypewriterEditor : Editor
         serializedObject.Update();
 
         if (!serializedObject.FindProperty("autoRepeat").boolValue)
-        {
             EditorGUILayout.PropertyField(serializedObject.FindProperty("onTypingComplete"));
-        }
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("text"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("playOnEnable"));
@@ -477,6 +478,8 @@ public class UITextTypewriterEditor : Editor
         }
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("delayAfterPunctuation"));
+
+        // Trailing Char is back!
         EditorGUILayout.PropertyField(serializedObject.FindProperty("trailingChar"));
 
         EditorGUILayout.Space();
