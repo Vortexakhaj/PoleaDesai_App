@@ -13,49 +13,39 @@ public class FixedUIPosition : MonoBehaviour
     [Tooltip("Lock the UI element to its starting world rotation.")]
     public bool lockRotation = true;
 
-    private RectTransform rectTransform;
     private Vector3 initialWorldPosition;
     private Quaternion initialWorldRotation;
 
     void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
         StoreInitialState();
     }
 
     void OnEnable()
     {
-        // Recapture state in case the object was moved while disabled
-        if (rectTransform == null)
-            rectTransform = GetComponent<RectTransform>();
-
         StoreInitialState();
     }
 
     void LateUpdate()
     {
-        if (rectTransform == null) return;
 
         // If the parent has moved, force this rect back to its world position
-        if (lockPosition && rectTransform.position != initialWorldPosition)
+        if (lockPosition && transform.position != initialWorldPosition)
         {
-            rectTransform.position = initialWorldPosition;
+            transform.position = initialWorldPosition;
         }
 
         // If the parent has rotated, force this rect back to its world rotation
-        if (lockRotation && rectTransform.rotation != initialWorldRotation)
+        if (lockRotation && transform.rotation != initialWorldRotation)
         {
-            rectTransform.rotation = initialWorldRotation;
+            transform.rotation = initialWorldRotation;
         }
     }
 
     private void StoreInitialState()
     {
-        if (rectTransform != null)
-        {
-            initialWorldPosition = rectTransform.position;
-            initialWorldRotation = rectTransform.rotation;
-        }
+        initialWorldPosition = transform.position;
+        initialWorldRotation = transform.rotation;
     }
 
     /// <summary>
@@ -64,7 +54,6 @@ public class FixedUIPosition : MonoBehaviour
     /// </summary>
     public void UpdateLockedPosition(Vector3 newWorldPosition)
     {
-        initialWorldPosition = newWorldPosition;
-        rectTransform.position = newWorldPosition;
+        transform.position = initialWorldPosition = newWorldPosition;
     }
 }

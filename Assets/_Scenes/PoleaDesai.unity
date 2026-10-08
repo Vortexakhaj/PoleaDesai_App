@@ -5817,7 +5817,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 251060531}
   m_OnClick:
     m_PersistentCalls:
@@ -6187,7 +6187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277439285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7654,7 +7654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &339103520
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -12355,7 +12355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showEditor: 0
-  screenIndex: 5
+  screenIndex: 0
   screenToggler: {fileID: 534941340}
 --- !u!224 &534941342
 RectTransform:
@@ -16401,7 +16401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &765451163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36474,7 +36474,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -38860,7 +38860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9731, y: -1209}
+  m_AnchoredPosition: {x: -9890, y: -1144}
   m_SizeDelta: {x: 783, y: 1313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936428365
@@ -38878,7 +38878,6 @@ MonoBehaviour:
   animations:
   - name: Default
     frames:
-    - {fileID: 21300000, guid: bdf90bf6b27835f4da5f58ba5c8db5ff, type: 3}
     - {fileID: 21300000, guid: 85ed3be81417aa047a6cc4d6d181b9cf, type: 3}
     - {fileID: 21300000, guid: d92dd5c644256d74eacd1b46571da86d, type: 3}
     - {fileID: 21300000, guid: 49d37c0d1b3979b4eab41c71073a8ff3, type: 3}
@@ -38896,7 +38895,7 @@ MonoBehaviour:
     loop: 1
   defaultState: Default
   transitions: []
-  playOnAwake: 0
+  playOnAwake: 1
   preserveAspect: 1
   currentClip:
     name: 
@@ -42362,7 +42361,7 @@ MonoBehaviour:
   stories: []
   delayBetweenStories: 1.5
   skipRichTextTags: 1
-  useRevealFlare: 0
+  useRevealFlare: 1
   flareOffsetY: 15
   isPaused: 0
   useAudio: 0
