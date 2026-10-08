@@ -21,16 +21,17 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows64
+          buildName: PoleaDesai_App 
           versioning: Semantic        # sets the Unity bundle version from your git tag
 
       - name: Zip build contents        # zip the CONTENTS so the exe sits at the zip root
         run: |
           cd build/StandaloneWindows64
-          zip -r "$GITHUB_WORKSPACE/MyGame-windows.zip" .
+          zip -r "$GITHUB_WORKSPACE/PoleaDesai_App-windows.zip" .
 
       - uses: softprops/action-gh-release@v2
         with:
-          files: MyGame-windows.zip
+          files: PoleaDesai_App-windows.zip
 
   launcher:
     needs: game
