@@ -94,14 +94,14 @@ public class UIImageSpriteAnimator : MonoBehaviour
         while (clipTimer >= frameDuration)
         {
             clipTimer -= frameDuration;
-            currentFrame = (currentFrame + 1) % currentClip.frames.Count;
-
-            if (!currentClip.loop && currentFrame == 0)
+            
+            if (!currentClip.loop && currentFrame >= currentClip.frames.Count - 1)
             {
-                Stop();
+                isPlaying = false;
                 return;
             }
 
+            currentFrame = (currentFrame + 1) % currentClip.frames.Count;
             image.sprite = currentClip.frames[currentFrame];
         }
     }

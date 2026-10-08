@@ -71,6 +71,8 @@ ShaderVariantCollection:
         passType: 0
       - keywords: COLOR_FILTER TARGET_LUMINANCE
         passType: 0
+      - keywords: COLOR_FILTER TRANSITION_DISSOLVE
+        passType: 0
       - keywords: COLOR_FILTER TRANSITION_MELT
         passType: 0
       - keywords: DETAIL_ADDITIVE
@@ -126,6 +128,10 @@ ShaderVariantCollection:
       - keywords: SAMPLING_PIXELATION TONE_RETRO UNITY_UI_CLIP_RECT
         passType: 0
       - keywords: SAMPLING_RGB_SHIFT
+        passType: 0
+      - keywords: TARGET_HUE TRANSITION_DISSOLVE
+        passType: 0
+      - keywords: TARGET_LUMINANCE TRANSITION_DISSOLVE
         passType: 0
       - keywords: TONE_GRAYSCALE
         passType: 0

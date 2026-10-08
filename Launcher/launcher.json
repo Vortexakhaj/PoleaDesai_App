@@ -2,7 +2,7 @@
   "RepoOwner": "Vortexakhaj",
   "RepoName": "PoleaDesai_App",
   "GameFolder": "Game",
-  "GameExe": "StandaloneWindows64.exe",
+  "GameExe": "PoleaDesai_App.exe",
   "GameAssetPattern": "*windows*.zip",
   "LauncherAssetPattern": "Launcher*.zip",
   "AutoLaunch": true

@@ -30,10 +30,10 @@ static class Program
 
 sealed class LauncherConfig
 {
-    public string RepoOwner  { get; set; } = "YOUR_GITHUB_USER";
-    public string RepoName   { get; set; } = "YOUR_REPO";
+    public string RepoOwner  { get; set; } = "Vortexakhaj";
+    public string RepoName   { get; set; } = "PoleaDesai_App";
     public string GameFolder { get; set; } = "Game";                 // install dir next to Launcher.exe
-    public string GameExe    { get; set; } = "MyGame.exe";           // relative to zip root
+    public string GameExe    { get; set; } = "PoleaDesai_App.exe";           // relative to zip root
     public string GameAssetPattern     { get; set; } = "*windows*.zip"; // which release asset is the game
     public string LauncherAssetPattern { get; set; } = "Launcher*.zip"; // asset used to self-update
     public bool   AutoLaunch  { get; set; } = true;
@@ -84,7 +84,7 @@ sealed class ReleaseClient : IDisposable
         })
         { Timeout = TimeSpan.FromMinutes(30) }; // default 100s is too short for big zips
 
-        _http.DefaultRequestHeaders.UserAgent.ParseAdd("MyGame-Launcher/1.0"); // GitHub requires a UA
+        _http.DefaultRequestHeaders.UserAgent.ParseAdd("PoleaDesai_App-Launcher/1.0"); // GitHub requires a UA
         _http.DefaultRequestHeaders.Accept.ParseAdd("application/vnd.github+json");
         if (!string.IsNullOrEmpty(cfg.Token))
             _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", cfg.Token);
@@ -146,7 +146,7 @@ sealed class LauncherForm : Form
 
     public LauncherForm()
     {
-        Text = "My Game — Launcher";
+        Text = "PoleaDesai_App - Launcher";
         ClientSize = new Size(480, 190);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
