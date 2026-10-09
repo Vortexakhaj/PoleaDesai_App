@@ -89,6 +89,10 @@ ShaderVariantCollection:
         passType: 0
       - keywords: EDGE_PLAIN
         passType: 0
+      - keywords: EDGE_PLAIN TRANSITION_DISSOLVE
+        passType: 0
+      - keywords: EDGE_PLAIN TRANSITION_MELT
+        passType: 0
       - keywords: EDGE_SHINY
         passType: 0
       - keywords: GRADATION_COLOR2
@@ -113,7 +117,11 @@ ShaderVariantCollection:
         passType: 0
       - keywords: SAMPLING_BLUR_FAST TRANSITION_DISSOLVE UNITY_UI_CLIP_RECT
         passType: 0
+      - keywords: SAMPLING_BLUR_FAST TRANSITION_MELT
+        passType: 0
       - keywords: SAMPLING_BLUR_MEDIUM
+        passType: 0
+      - keywords: SAMPLING_BLUR_MEDIUM TRANSITION_MELT
         passType: 0
       - keywords: SAMPLING_EDGE_ALPHA
         passType: 0
@@ -129,19 +137,31 @@ ShaderVariantCollection:
         passType: 0
       - keywords: SAMPLING_RGB_SHIFT
         passType: 0
+      - keywords: SAMPLING_RGB_SHIFT TRANSITION_MELT
+        passType: 0
       - keywords: TARGET_HUE TRANSITION_DISSOLVE
         passType: 0
       - keywords: TARGET_LUMINANCE TRANSITION_DISSOLVE
         passType: 0
       - keywords: TONE_GRAYSCALE
         passType: 0
+      - keywords: TONE_GRAYSCALE TRANSITION_DISSOLVE
+        passType: 0
       - keywords: TONE_NEGATIVE
+        passType: 0
+      - keywords: TONE_NEGATIVE TRANSITION_DISSOLVE
         passType: 0
       - keywords: TONE_POSTERIZE
         passType: 0
+      - keywords: TONE_POSTERIZE TRANSITION_DISSOLVE
+        passType: 0
       - keywords: TONE_RETRO
         passType: 0
+      - keywords: TONE_RETRO TRANSITION_DISSOLVE
+        passType: 0
       - keywords: TONE_SEPIA
+        passType: 0
+      - keywords: TONE_SEPIA TRANSITION_DISSOLVE
         passType: 0
       - keywords: TRANSITION_BLAZE
         passType: 0
