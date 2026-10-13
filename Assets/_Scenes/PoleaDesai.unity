@@ -3597,7 +3597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &156980476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4727,7 +4727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &216084778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5884,7 +5884,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593688533}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   text: {fileID: 2108908931}
   playOnEnable: 1
   autoRepeat: 0
@@ -6506,7 +6518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &277439285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11581,7 +11593,19 @@ MonoBehaviour:
   toggleNextPagetrue: 1
   toggleTrueEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593688533}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggleNextPagefalse: 1
   toggleFalseEvent:
     m_PersistentCalls:
@@ -11978,7 +12002,7 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
-  duration: 0.3
+  duration: 0.7
   animEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12998,7 +13022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showEditor: 0
-  screenIndex: 0
+  screenIndex: 5
   screenToggler: {fileID: 534941340}
 --- !u!224 &534941342
 RectTransform:
@@ -17042,7 +17066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &765451163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19382,7 +19406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &878139597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28594,14 +28618,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1833828626}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   text: {fileID: 1359646591}
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0.1
   delayToEnd: 0
-  typingMode: 2
+  typingMode: 0
   delayBetweenChars: 0
   delayBetweenWords: 0.15
   delayBetweenLines: 0.001
@@ -30349,7 +30385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1437295867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38714,14 +38750,21 @@ MonoBehaviour:
   typingMode: 2
   delayBetweenChars: 0
   delayBetweenWords: 0.15
-  delayBetweenLines: 0.001
+  delayBetweenLines: 0.3
   delayBetweenParagraphs: 0.5
   delayAfterPunctuation: 0
   trailingChar: 
-  stories: []
+  stories:
+  - 'Every corner of Navsari holds a distinct story, a familiar flavor, or a cherished
+
+    sound.
+    Tap the memories closest to your heart to help map our shared heritage.
+
+    The
+    larger a bubble grows, the more people share that memory.'
   delayBetweenStories: 1.5
   skipRichTextTags: 1
-  useRevealFlare: 0
+  useRevealFlare: 1
   flareOffsetY: 15
   isPaused: 0
   useAudio: 0
@@ -41422,7 +41465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9462.889, y: -499.73328}
+  m_AnchoredPosition: {x: -9981.2, y: -1075.2}
   m_SizeDelta: {x: 783, y: 1313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936428365
@@ -41520,10 +41563,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1de6698ef3d9dfe4ca2d1f211e38eff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenPosition: {x: 571, y: 798.9}
-  useNormalized: 0
-  normalizedX: 0.5
-  normalizedY: 0.5
+  screenPosition: {x: 0, y: 0}
+  useNormalized: 1
+  normalizedX: 0.23
+  normalizedY: 0.22
   pinEveryFrame: 1
   cameraOverride: {fileID: 0}
 --- !u!114 &1936496259 stripped
@@ -45168,7 +45211,7 @@ MonoBehaviour:
   typingMode: 2
   delayBetweenChars: 0
   delayBetweenWords: 0
-  delayBetweenLines: 0.001
+  delayBetweenLines: 0.3
   delayBetweenParagraphs: 0
   delayAfterPunctuation: 0
   trailingChar: 
@@ -45833,8 +45876,8 @@ MonoBehaviour:
   m_TransitionTexSpeed: {x: 0, y: 0}
   m_TransitionRotation: 0
   m_TransitionKeepAspectRatio: 1
-  m_TransitionWidth: 0
-  m_TransitionSoftness: 0
+  m_TransitionWidth: 0.2
+  m_TransitionSoftness: 0.2
   m_TransitionRange:
     m_Min: 0
     m_Max: 1
@@ -46595,6 +46638,18 @@ MonoBehaviour:
   toggleTrueEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1833828626}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1090908399}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
