@@ -16,6 +16,6 @@ public class UIPlayPauseBridge : MonoBehaviour
     // This public method calls the static method on the Timeline Controller
     public void BridgeClick()
     {
-        TimelineSequenceController.GlobalTogglePlayPause();
+        TimelineSequenceController.ActiveController.TogglePlayPause();
     }
 }

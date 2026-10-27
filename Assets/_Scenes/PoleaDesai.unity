@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 5128126}
   - component: {fileID: 5128125}
   - component: {fileID: 5128124}
-  - component: {fileID: 5128127}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -176,7 +175,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5128127}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -308,22 +307,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5128122}
   m_CullTransparentMesh: 1
---- !u!114 &5128127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 5128124}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &5628057
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +720,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 662697749}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -1359,6 +1342,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1001 &50681092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1668,7 +1652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -735, y: -952}
+  m_AnchoredPosition: {x: -735, y: -800}
   m_SizeDelta: {x: 649, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77725270
@@ -2198,7 +2182,6 @@ GameObject:
   - component: {fileID: 102363771}
   - component: {fileID: 102363770}
   - component: {fileID: 102363769}
-  - component: {fileID: 102363768}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -2225,22 +2208,6 @@ RectTransform:
   m_AnchoredPosition: {x: 4, y: 0}
   m_SizeDelta: {x: 680.5567, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &102363768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102363766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 102363769}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &102363769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,19 +2407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 152799085}
-        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
-        m_MethodName: OnTypewriterFinished
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   text: {fileID: 112422594}
   playOnEnable: 0
   autoRepeat: 0
@@ -2592,7 +2547,6 @@ GameObject:
   - component: {fileID: 113332072}
   - component: {fileID: 113332071}
   - component: {fileID: 113332070}
-  - component: {fileID: 113332069}
   m_Layer: 0
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -2619,22 +2573,6 @@ RectTransform:
   m_AnchoredPosition: {x: 555, y: 1062}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &113332069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113332067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 113332070}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &113332070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,7 +2588,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 113332069}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -3051,6 +2989,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &117664846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3101,7 +3040,6 @@ GameObject:
   - component: {fileID: 145009797}
   - component: {fileID: 145009796}
   - component: {fileID: 145009795}
-  - component: {fileID: 145009794}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -3128,22 +3066,6 @@ RectTransform:
   m_AnchoredPosition: {x: 13, y: -4}
   m_SizeDelta: {x: 447.7113, y: 150.3056}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &145009794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145009792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 145009795}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &145009795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,7 +3246,6 @@ GameObject:
   m_Component:
   - component: {fileID: 152799083}
   - component: {fileID: 152799084}
-  - component: {fileID: 152799085}
   m_Layer: 0
   m_Name: Frame1
   m_TagString: Untagged
@@ -3384,7 +3305,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 152799085}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -3434,22 +3355,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &152799085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152799082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 112422593}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 0}
 --- !u!1001 &156139758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3740,6 +3645,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &157108412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,7 +3838,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1968161590}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -4093,6 +3999,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!114 &168365997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4262,7 +4169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1161.9}
+  m_AnchoredPosition: {x: 0, y: -937}
   m_SizeDelta: {x: 462, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180247190
@@ -4539,6 +4446,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189227024}
   m_CullTransparentMesh: 1
+--- !u!1 &189913686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189913687}
+  - component: {fileID: 189913690}
+  - component: {fileID: 189913689}
+  - component: {fileID: 189913688}
+  m_Layer: 5
+  m_Name: PlayIcon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &189913687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189913686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114784128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 19, y: 0}
+  m_SizeDelta: {x: 190, y: 190}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &189913688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189913686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1946a6ad062b2d44b8ee13b0f2becfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.5}
+  shadowDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  iterations: 5
+  shadowSpread: {x: 1, y: 1}
+--- !u!114 &189913689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189913686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 36b538639184b154a92ca2b8dabed21b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &189913690
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189913686}
+  m_CullTransparentMesh: 1
 --- !u!1 &202699648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,7 +4720,6 @@ GameObject:
   - component: {fileID: 216084782}
   - component: {fileID: 216084781}
   - component: {fileID: 216084780}
-  - component: {fileID: 216084779}
   m_Layer: 0
   m_Name: Text (TMP) 1
   m_TagString: Untagged
@@ -4747,22 +4746,6 @@ RectTransform:
   m_AnchoredPosition: {x: 23, y: 1313}
   m_SizeDelta: {x: 793.0434, y: 262.4033}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &216084779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216084777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 216084780}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &216084780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5416,7 +5399,6 @@ GameObject:
   - component: {fileID: 237928601}
   - component: {fileID: 237928600}
   - component: {fileID: 237928599}
-  - component: {fileID: 237928598}
   m_Layer: 0
   m_Name: Text (TMP) 1
   m_TagString: Untagged
@@ -5443,22 +5425,6 @@ RectTransform:
   m_AnchoredPosition: {x: -124, y: 1425.751}
   m_SizeDelta: {x: 1152.2878, y: 262.7971}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &237928598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237928596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 237928599}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &237928599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5770,7 +5736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1220}
+  m_AnchoredPosition: {x: 0, y: 1311}
   m_SizeDelta: {x: 0, y: 81.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242725956
@@ -5901,7 +5867,7 @@ MonoBehaviour:
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 0
-  delayToStart: 0.1
+  delayToStart: 0
   delayToEnd: 0
   typingMode: 0
   delayBetweenChars: 0
@@ -6344,6 +6310,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &257423705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6518,7 +6485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277439285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6704,7 +6671,6 @@ GameObject:
   - component: {fileID: 277482496}
   - component: {fileID: 277482495}
   - component: {fileID: 277482494}
-  - component: {fileID: 277482493}
   m_Layer: 0
   m_Name: Text (TMP) 1
   m_TagString: Untagged
@@ -6731,22 +6697,6 @@ RectTransform:
   m_AnchoredPosition: {x: -124, y: 1425.751}
   m_SizeDelta: {x: 1152.2878, y: 262.7971}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &277482493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277482491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 277482494}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &277482494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6908,7 +6858,6 @@ GameObject:
   - component: {fileID: 280702823}
   - component: {fileID: 280702822}
   - component: {fileID: 280702821}
-  - component: {fileID: 280702820}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -6935,22 +6884,6 @@ RectTransform:
   m_AnchoredPosition: {x: 32, y: -37}
   m_SizeDelta: {x: 533.0042, y: 285.1874}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &280702820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280702818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 280702821}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &280702821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6966,7 +6899,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 280702820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -7548,6 +7481,11 @@ MonoBehaviour:
   m_SamplingScale: 1
   m_AllowToModifyMeshShape: 1
   m_CustomRoot: {fileID: 0}
+--- !u!1 &315471089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1321684174259503151, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+  m_PrefabInstance: {fileID: 3349775865341183202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &320991433
 GameObject:
   m_ObjectHideFlags: 0
@@ -7772,6 +7710,81 @@ MonoBehaviour:
   m_SamplingScale: 1
   m_AllowToModifyMeshShape: 1
   m_CustomRoot: {fileID: 0}
+--- !u!1 &326198100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326198101}
+  - component: {fileID: 326198103}
+  - component: {fileID: 326198102}
+  m_Layer: 5
+  m_Name: Bg (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &326198101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326198100}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 486032499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1500.6803}
+  m_SizeDelta: {x: 0, y: -3001.3608}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &326198102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326198100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9764706, g: 0.95686275, b: 0.89411765, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &326198103
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326198100}
+  m_CullTransparentMesh: 1
 --- !u!1 &334002548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7842,7 +7855,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1385004039}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -8017,6 +8030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339103521}
   - component: {fileID: 339103520}
+  - component: {fileID: 339103522}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -8122,6 +8136,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &339103522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339103519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineDirector: {fileID: 339103520}
+  typewriter: {fileID: 0}
+  uiScaler: {fileID: 0}
+  playPauseButton: {fileID: 1788459723}
+  buttonText: {fileID: 1670246355}
 --- !u!1 &342223896
 GameObject:
   m_ObjectHideFlags: 0
@@ -8134,7 +8165,6 @@ GameObject:
   - component: {fileID: 342223901}
   - component: {fileID: 342223900}
   - component: {fileID: 342223899}
-  - component: {fileID: 342223898}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -8161,22 +8191,6 @@ RectTransform:
   m_AnchoredPosition: {x: 33, y: -3.2243958}
   m_SizeDelta: {x: 768.4854, y: 308.6932}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &342223898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342223896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 342223899}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &342223899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8192,7 +8206,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 342223898}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -8790,6 +8804,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &350545455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8862,7 +8877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -746}
+  m_AnchoredPosition: {x: 0, y: -717}
   m_SizeDelta: {x: 3270, y: 1197.5098}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &357890175
@@ -9084,7 +9099,6 @@ GameObject:
   - component: {fileID: 376150597}
   - component: {fileID: 376150596}
   - component: {fileID: 376150595}
-  - component: {fileID: 376150598}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -9126,7 +9140,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 376150598}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -9258,22 +9272,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376150593}
   m_CullTransparentMesh: 1
---- !u!114 &376150598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376150593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 376150595}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &376217120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9641,6 +9639,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!224 &397025858 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8473741193427740882, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
@@ -10812,6 +10811,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &450688540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10849,6 +10849,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450688537}
+  m_CullTransparentMesh: 1
+--- !u!1 &455290184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455290185}
+  - component: {fileID: 455290187}
+  - component: {fileID: 455290186}
+  m_Layer: 5
+  m_Name: Bg (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &455290185
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455290184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 521764100}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1500.6803}
+  m_SizeDelta: {x: 0, y: -3001.3608}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &455290186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455290184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9764706, g: 0.95686275, b: 0.89411765, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &455290187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455290184}
   m_CullTransparentMesh: 1
 --- !u!1001 &459087794
 PrefabInstance:
@@ -11017,7 +11092,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 961936058}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -11093,7 +11168,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 961936058}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -11560,6 +11635,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 602502873}
+  - {fileID: 326198101}
   - {fileID: 1537727356}
   - {fileID: 239295507}
   - {fileID: 242725955}
@@ -11923,7 +11999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1223}
+  m_AnchoredPosition: {x: 0, y: -1194}
   m_SizeDelta: {x: 1171, y: 1394.09}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &494462613
@@ -11978,15 +12054,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e4e92f0b109ea428c0468089e4af01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getIniPos: 1
-  appendTweens: 0
-  isImageBounce: 0
-  ease: 6
   inOut:
   - {fileID: 79699648}
   - {fileID: 1823384062}
   - {fileID: 15164220}
   - {fileID: 397025858}
+  getIniPos: 1
+  tweenType: 1
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 0.9
+  isUniform: 1
+  isLoop: 0
+  playAtAwake: 0
+  appendTweens: 0
   FromPos:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -11997,13 +12124,15 @@ MonoBehaviour:
   - {x: 585.5, y: -517.53}
   - {x: 585.5, y: -876.56}
   - {x: 585.5, y: -1235.59}
-  initialScale:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  duration: 0.7
+  primeAtStart: 1
+  primeOnEnable: 1
+  deactivateWhenHidden: 1
+  hiddenAlphaThreshold: 0.01
+  delayeventby: 0
   animEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  animBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &497587381
@@ -12523,7 +12652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 29}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -12751,6 +12880,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1313107306}
+  - {fileID: 455290185}
   - {fileID: 946381229}
   - {fileID: 509171085}
   - {fileID: 357890174}
@@ -12820,10 +12950,58 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 677115329}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 315471089}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggleNextPagefalse: 1
   toggleFalseEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 677115329}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 315471089}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &521764102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13022,7 +13200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showEditor: 0
-  screenIndex: 5
+  screenIndex: 0
   screenToggler: {fileID: 534941340}
 --- !u!224 &534941342
 RectTransform:
@@ -13455,6 +13633,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &584496758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13529,7 +13708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -812.75}
+  m_AnchoredPosition: {x: 0, y: -721.75}
   m_SizeDelta: {x: 447.68, y: 54.45}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &593688535
@@ -13662,7 +13841,7 @@ MonoBehaviour:
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 0
-  delayToStart: 0.3
+  delayToStart: 0
   delayToEnd: 0
   typingMode: 0
   delayBetweenChars: 0
@@ -13742,7 +13921,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 605932881}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -13842,7 +14021,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 216084779}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -14115,6 +14294,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &600911345
 GameObject:
   m_ObjectHideFlags: 0
@@ -14387,7 +14567,6 @@ GameObject:
   - component: {fileID: 605932880}
   - component: {fileID: 605932879}
   - component: {fileID: 605932878}
-  - component: {fileID: 605932881}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -14429,18 +14608,6 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 605932881}
-        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
-        m_MethodName: OnTypewriterFinished
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 156980475}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -14578,22 +14745,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605932876}
   m_CullTransparentMesh: 1
---- !u!114 &605932881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605932876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 605932878}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1001 &606021582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15079,7 +15230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1023}
+  m_AnchoredPosition: {x: 0, y: 1146}
   m_SizeDelta: {x: 915, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &642250199
@@ -15395,7 +15546,6 @@ GameObject:
   - component: {fileID: 662697752}
   - component: {fileID: 662697751}
   - component: {fileID: 662697750}
-  - component: {fileID: 662697749}
   m_Layer: 0
   m_Name: Text (TMP) 1
   m_TagString: Untagged
@@ -15403,22 +15553,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &662697749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662697748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 662697750}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &662697750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15841,6 +15975,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6006181739721974810, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
   m_PrefabInstance: {fileID: 3349775865341183202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &677115330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677115329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1946a6ad062b2d44b8ee13b0f2becfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.5}
+  shadowDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
+  iterations: 20
+  shadowSpread: {x: 5, y: 5}
 --- !u!1 &677404670
 GameObject:
   m_ObjectHideFlags: 0
@@ -15991,7 +16142,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 113332069}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -16027,7 +16178,6 @@ GameObject:
   - component: {fileID: 688622092}
   - component: {fileID: 688622091}
   - component: {fileID: 688622090}
-  - component: {fileID: 688622093}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -16069,7 +16219,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 688622093}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -16202,22 +16352,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688622088}
   m_CullTransparentMesh: 1
---- !u!114 &688622093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688622088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 688622090}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &689558976
 GameObject:
   m_ObjectHideFlags: 0
@@ -16230,7 +16364,6 @@ GameObject:
   - component: {fileID: 689558980}
   - component: {fileID: 689558979}
   - component: {fileID: 689558978}
-  - component: {fileID: 689558981}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -16404,22 +16537,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689558976}
   m_CullTransparentMesh: 1
---- !u!114 &689558981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689558976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 689558978}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &695041167
 GameObject:
   m_ObjectHideFlags: 0
@@ -17066,7 +17183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &765451163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17083,8 +17200,8 @@ RectTransform:
   - {fileID: 1720494997}
   - {fileID: 323098210}
   - {fileID: 488647389}
-  - {fileID: 2114784128}
   - {fileID: 251060529}
+  - {fileID: 2114784128}
   m_Father: {fileID: 534941342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -17367,6 +17484,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &772588264
 GameObject:
   m_ObjectHideFlags: 0
@@ -17540,6 +17658,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!1 &778502686
 GameObject:
   m_ObjectHideFlags: 0
@@ -18263,7 +18382,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 689558981}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -18289,7 +18408,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 689558981}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -19399,7 +19518,6 @@ GameObject:
   - component: {fileID: 878139601}
   - component: {fileID: 878139600}
   - component: {fileID: 878139599}
-  - component: {fileID: 878139598}
   m_Layer: 0
   m_Name: Text (TMP) 1 (1)
   m_TagString: Untagged
@@ -19426,22 +19544,6 @@ RectTransform:
   m_AnchoredPosition: {x: 23, y: 1313}
   m_SizeDelta: {x: 793.0434, y: 262.4033}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &878139598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878139596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 878139599}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &878139599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19456,19 +19558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 878139598}
-        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
-        m_MethodName: OnTypewriterFinished
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   text: {fileID: 878139600}
   playOnEnable: 1
   autoRepeat: 0
@@ -19970,7 +20060,6 @@ GameObject:
   - component: {fileID: 889417277}
   - component: {fileID: 889417276}
   - component: {fileID: 889417275}
-  - component: {fileID: 889417274}
   m_Layer: 0
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -19997,22 +20086,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1214.14, y: 1242.42}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &889417274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889417272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 889417275}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &889417275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20028,7 +20101,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889417274}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -20687,7 +20760,6 @@ GameObject:
   - component: {fileID: 920978023}
   - component: {fileID: 920978022}
   - component: {fileID: 920978021}
-  - component: {fileID: 920978024}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -20729,7 +20801,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920978024}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -20860,22 +20932,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920978019}
   m_CullTransparentMesh: 1
---- !u!114 &920978024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920978019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 920978021}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &926015064
 GameObject:
   m_ObjectHideFlags: 0
@@ -21342,7 +21398,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 342223898}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -21368,7 +21424,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 342223898}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -21561,7 +21617,6 @@ GameObject:
   - component: {fileID: 961936057}
   - component: {fileID: 961936056}
   - component: {fileID: 961936055}
-  - component: {fileID: 961936058}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -21735,22 +21790,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961936053}
   m_CullTransparentMesh: 1
---- !u!114 &961936058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961936053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 961936055}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &963877800
 GameObject:
   m_ObjectHideFlags: 0
@@ -21913,7 +21952,6 @@ GameObject:
   - component: {fileID: 976833527}
   - component: {fileID: 976833526}
   - component: {fileID: 976833525}
-  - component: {fileID: 976833524}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -21940,22 +21978,6 @@ RectTransform:
   m_AnchoredPosition: {x: 24, y: -18}
   m_SizeDelta: {x: 680.5567, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &976833524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976833522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 976833525}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &976833525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21971,7 +21993,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976833524}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -22663,7 +22685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1029847460}
   - component: {fileID: 1029847464}
-  - component: {fileID: 1029847461}
   m_Layer: 0
   m_Name: Frame2
   m_TagString: Untagged
@@ -22691,22 +22712,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1029847461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029847459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 2053689803}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1029847464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22726,7 +22731,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1029847461}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -22949,6 +22954,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!1 &1053739932
 GameObject:
   m_ObjectHideFlags: 0
@@ -22984,7 +22990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 29}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1056661756
@@ -23572,6 +23578,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!1 &1090430126
 GameObject:
   m_ObjectHideFlags: 0
@@ -23607,7 +23614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 910, y: 145}
+  m_AnchoredPosition: {x: 910, y: 87}
   m_SizeDelta: {x: 763, y: 274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090430128
@@ -23761,20 +23768,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e4e92f0b109ea428c0468089e4af01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getIniPos: 1
-  appendTweens: 0
-  isImageBounce: 1
-  ease: 0
   inOut:
   - {fileID: 1090908400}
+  getIniPos: 1
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isUniform: 1
+  isLoop: 0
+  playAtAwake: 0
+  appendTweens: 0
   FromPos:
   - {x: 0, y: 0}
   initialPos:
   - {x: 0, y: 0}
-  initialScale:
-  - {x: 0, y: 0}
-  duration: 1
+  primeAtStart: 1
+  primeOnEnable: 0
+  deactivateWhenHidden: 0
+  hiddenAlphaThreshold: 0.01
+  delayeventby: 0
   animEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  animBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1102252982
@@ -24258,7 +24321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -735, y: -952}
+  m_AnchoredPosition: {x: -735, y: -803}
   m_SizeDelta: {x: 649, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132018968
@@ -24410,7 +24473,6 @@ GameObject:
   - component: {fileID: 1141248460}
   - component: {fileID: 1141248459}
   - component: {fileID: 1141248458}
-  - component: {fileID: 1141248457}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -24437,22 +24499,6 @@ RectTransform:
   m_AnchoredPosition: {x: 55, y: 10}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1141248457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141248455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1141248458}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1141248458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24468,7 +24514,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141248457}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -24748,7 +24794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -884, y: 788}
+  m_AnchoredPosition: {x: -884, y: 715}
   m_SizeDelta: {x: 763, y: 274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146060778
@@ -25162,6 +25208,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1157980394
 GameObject:
   m_ObjectHideFlags: 0
@@ -25311,6 +25358,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161424571}
+  m_CullTransparentMesh: 1
+--- !u!1 &1163873357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163873358}
+  - component: {fileID: 1163873360}
+  - component: {fileID: 1163873359}
+  m_Layer: 5
+  m_Name: Bg (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1163873358
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163873357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1231476939}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1500.6803}
+  m_SizeDelta: {x: 0, y: -3001.3608}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1163873359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163873357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9764706, g: 0.95686275, b: 0.89411765, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1163873360
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163873357}
   m_CullTransparentMesh: 1
 --- !u!224 &1167152327 stripped
 RectTransform:
@@ -25651,6 +25773,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1191223346
 GameObject:
   m_ObjectHideFlags: 0
@@ -26611,7 +26734,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2128828318}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -26637,7 +26760,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2128828318}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -26692,6 +26815,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 36267831}
+  - {fileID: 1163873358}
   - {fileID: 505771197}
   - {fileID: 642250197}
   - {fileID: 2108908930}
@@ -27033,6 +27157,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1272818650
 GameObject:
   m_ObjectHideFlags: 0
@@ -27090,7 +27215,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1938279529}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -27509,7 +27634,6 @@ GameObject:
   - component: {fileID: 1304279616}
   - component: {fileID: 1304279615}
   - component: {fileID: 1304279614}
-  - component: {fileID: 1304279613}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -27536,22 +27660,6 @@ RectTransform:
   m_AnchoredPosition: {x: -202, y: 1228}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1304279613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304279611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1304279614}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1304279614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27907,6 +28015,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &1322050173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28504,7 +28613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1220}
+  m_AnchoredPosition: {x: 0, y: 1444.9}
   m_SizeDelta: {x: 0, y: 81.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359646591
@@ -28782,7 +28891,6 @@ GameObject:
   - component: {fileID: 1385004038}
   - component: {fileID: 1385004037}
   - component: {fileID: 1385004036}
-  - component: {fileID: 1385004039}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -28824,7 +28932,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1385004039}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -28956,22 +29064,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385004034}
   m_CullTransparentMesh: 1
---- !u!114 &1385004039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385004034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1385004036}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1001 &1395227571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29090,7 +29182,6 @@ GameObject:
   - component: {fileID: 1395655022}
   - component: {fileID: 1395655021}
   - component: {fileID: 1395655020}
-  - component: {fileID: 1395655023}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -29132,7 +29223,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1395655023}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -29264,22 +29355,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395655018}
   m_CullTransparentMesh: 1
---- !u!114 &1395655023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395655018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1395655020}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &1396798360
 GameObject:
   m_ObjectHideFlags: 0
@@ -29519,7 +29594,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 920978024}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -30178,7 +30253,6 @@ GameObject:
   - component: {fileID: 1431577411}
   - component: {fileID: 1431577410}
   - component: {fileID: 1431577409}
-  - component: {fileID: 1431577408}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -30205,22 +30279,6 @@ RectTransform:
   m_AnchoredPosition: {x: 63, y: -43}
   m_SizeDelta: {x: 821.8521, y: 285.1874}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1431577408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431577406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1431577409}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1431577409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30514,6 +30572,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  isPaused: 0
 --- !u!114 &1437295869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30713,6 +30772,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1443204435
 GameObject:
   m_ObjectHideFlags: 0
@@ -31382,6 +31442,82 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
+--- !u!1 &1479029563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479029564}
+  - component: {fileID: 1479029566}
+  - component: {fileID: 1479029565}
+  m_Layer: 5
+  m_Name: Bg (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1479029564
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479029563}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2140935286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1500.6803}
+  m_SizeDelta: {x: 0, y: -3001.3608}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1479029565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479029563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9764706, g: 0.95686275, b: 0.89411765, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1479029566
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479029563}
+  m_CullTransparentMesh: 1
 --- !u!1 &1488707542
 GameObject:
   m_ObjectHideFlags: 0
@@ -32560,6 +32696,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!1 &1575813836
 GameObject:
   m_ObjectHideFlags: 0
@@ -32572,7 +32709,6 @@ GameObject:
   - component: {fileID: 1575813841}
   - component: {fileID: 1575813840}
   - component: {fileID: 1575813839}
-  - component: {fileID: 1575813838}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -32599,22 +32735,6 @@ RectTransform:
   m_AnchoredPosition: {x: 24, y: -27}
   m_SizeDelta: {x: 553.4635, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1575813838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575813836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1575813839}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1575813839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32898,7 +33018,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 102363768}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -33429,20 +33549,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e4e92f0b109ea428c0468089e4af01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getIniPos: 1
-  appendTweens: 0
-  isImageBounce: 1
-  ease: 0
   inOut:
   - {fileID: 1589744041}
+  getIniPos: 1
+  tweenType: 3
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animCurveBackward:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speed: 1
+  isUniform: 1
+  isLoop: 0
+  playAtAwake: 0
+  appendTweens: 0
   FromPos:
   - {x: 0, y: 0}
   initialPos:
   - {x: 0, y: 0}
-  initialScale:
-  - {x: 0, y: 0}
-  duration: 1
+  primeAtStart: 1
+  primeOnEnable: 0
+  deactivateWhenHidden: 0
+  hiddenAlphaThreshold: 0.01
+  delayeventby: 0
   animEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  animBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1598775097
@@ -34469,6 +34645,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1617289206
 GameObject:
   m_ObjectHideFlags: 0
@@ -35094,7 +35271,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1431577408}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -37700,7 +37877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -887.7}
+  m_AnchoredPosition: {x: 0, y: -796.7}
   m_SizeDelta: {x: 476, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788632015
@@ -38324,7 +38501,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1395655023}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -38606,7 +38783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -776}
+  m_AnchoredPosition: {x: 0, y: -551.1}
   m_SizeDelta: {x: 1405.76, y: 145.2}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1833828628
@@ -38936,6 +39113,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &1846094973
 GameObject:
   m_ObjectHideFlags: 0
@@ -38973,7 +39151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 91}
   m_SizeDelta: {x: 1340, y: 1561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846094975
@@ -39411,7 +39589,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 376150598}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -39437,7 +39615,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 376150598}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -39584,6 +39762,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &1853178252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40576,7 +40755,6 @@ GameObject:
   - component: {fileID: 1912409632}
   - component: {fileID: 1912409631}
   - component: {fileID: 1912409630}
-  - component: {fileID: 1912409633}
   m_Layer: 0
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -40618,7 +40796,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1912409633}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -40750,22 +40928,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912409628}
   m_CullTransparentMesh: 1
---- !u!114 &1912409633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912409628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1912409630}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &1913173142
 GameObject:
   m_ObjectHideFlags: 0
@@ -41005,7 +41167,6 @@ GameObject:
   - component: {fileID: 1919137983}
   - component: {fileID: 1919137982}
   - component: {fileID: 1919137981}
-  - component: {fileID: 1919137980}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -41032,22 +41193,6 @@ RectTransform:
   m_AnchoredPosition: {x: -218.9245, y: 1202.6343}
   m_SizeDelta: {x: 1216.0032, y: 393.9185}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1919137980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919137978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1919137981}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1919137981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41063,7 +41208,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1919137980}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -41686,7 +41831,6 @@ GameObject:
   - component: {fileID: 1938279532}
   - component: {fileID: 1938279531}
   - component: {fileID: 1938279530}
-  - component: {fileID: 1938279529}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -41713,22 +41857,6 @@ RectTransform:
   m_AnchoredPosition: {x: 58, y: 15}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1938279529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938279527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1938279530}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &1938279530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42244,7 +42372,6 @@ GameObject:
   - component: {fileID: 1968161589}
   - component: {fileID: 1968161588}
   - component: {fileID: 1968161587}
-  - component: {fileID: 1968161590}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -42418,22 +42545,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968161585}
   m_CullTransparentMesh: 1
---- !u!114 &1968161590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968161585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 1968161587}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &1998151386
 GameObject:
   m_ObjectHideFlags: 0
@@ -42688,6 +42799,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!114 &2000181594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42738,7 +42850,6 @@ GameObject:
   - component: {fileID: 2001535483}
   - component: {fileID: 2001535482}
   - component: {fileID: 2001535481}
-  - component: {fileID: 2001535480}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -42765,22 +42876,6 @@ RectTransform:
   m_AnchoredPosition: {x: 54, y: -33}
   m_SizeDelta: {x: 821.8521, y: 285.1874}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2001535480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001535478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 2001535481}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!114 &2001535481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42796,7 +42891,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2001535480}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -43213,7 +43308,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1919137980}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -43591,7 +43686,6 @@ GameObject:
   - component: {fileID: 2036986987}
   - component: {fileID: 2036986986}
   - component: {fileID: 2036986985}
-  - component: {fileID: 2036986988}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -43633,7 +43727,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2036986988}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -43768,22 +43862,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036986983}
   m_CullTransparentMesh: 1
---- !u!114 &2036986988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036986983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 2036986985}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &2038303052
 GameObject:
   m_ObjectHideFlags: 0
@@ -43906,7 +43984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 224.90002}
   m_SizeDelta: {x: 760, y: 1015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052596333
@@ -44157,7 +44235,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1029847461}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -45044,7 +45122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.561035, y: -200.04175}
+  m_AnchoredPosition: {x: 23.561035, y: -77.04175}
   m_SizeDelta: {x: 1482.3223, y: 1778.0835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108908931
@@ -45206,7 +45284,7 @@ MonoBehaviour:
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 0
-  delayToStart: 0.1
+  delayToStart: 0
   delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0
@@ -45485,7 +45563,6 @@ GameObject:
   - component: {fileID: 2128828317}
   - component: {fileID: 2128828316}
   - component: {fileID: 2128828315}
-  - component: {fileID: 2128828318}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -45659,22 +45736,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128828313}
   m_CullTransparentMesh: 1
---- !u!114 &2128828318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128828313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a4a3940796e7a448525192053f9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 339103520}
-  typewriter: {fileID: 2128828315}
-  playPauseButton: {fileID: 0}
-  buttonText: {fileID: 1670246355}
 --- !u!1 &2129225063
 GameObject:
   m_ObjectHideFlags: 0
@@ -46053,7 +46114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d164527b8f5ddb346ae3c7976c9de7c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25a9f364362ec3b408a6a437149ddba0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46237,6 +46298,7 @@ MonoBehaviour:
   tweenBackwardEvent:
     m_PersistentCalls:
       m_Calls: []
+  isPaused: 0
 --- !u!1 &2138532736
 GameObject:
   m_ObjectHideFlags: 0
@@ -46572,6 +46634,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isPaused: 0
 --- !u!1 &2140935285
 GameObject:
   m_ObjectHideFlags: 0
@@ -46603,6 +46666,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2110865598}
+  - {fileID: 1479029564}
   - {fileID: 1959984866}
   - {fileID: 2139810843}
   - {fileID: 1359646590}
@@ -47085,6 +47149,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 860100079}
     m_Modifications:
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2c1045b55d12f7479a30d3f1e62fe19, type: 3}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 684740925770566232, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1567559153396338367, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_Name
       value: NavButtons
@@ -47099,6 +47191,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1712328508901406300, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712328508901406300, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234148852066125801, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Spacing
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234148852066125801, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234148852066125801, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234148852066125801, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_ChildForceExpandWidth
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2388717287976271838, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
@@ -47133,9 +47245,53 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2c1045b55d12f7479a30d3f1e62fe19, type: 3}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270833580237569286, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4930078553993745158, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: PointListsProperties.PointListProperties.Array.data[0].GeneratorData.NeedsUpdate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930078553993745158, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: PointListsProperties.PointListProperties.Array.data[0].Positions.Array.data[0].x
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930078553993745158, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: PointListsProperties.PointListProperties.Array.data[0].Positions.Array.data[0].y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930078553993745158, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: PointListsProperties.PointListProperties.Array.data[0].Positions.Array.data[2].x
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930078553993745158, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: PointListsProperties.PointListProperties.Array.data[0].Positions.Array.data[2].y
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 5267852330949073592, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -47146,12 +47302,76 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5267852330949073592, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267852330949073592, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267852330949073592, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 125
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5267852330949073592, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420445239696553110, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420445239696553110, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420445239696553110, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420445239696553110, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420445239696553110, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462705479539580612, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462705479539580612, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2c1045b55d12f7479a30d3f1e62fe19, type: 3}
+    - target: {fileID: 5523421269791264486, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006181739721974810, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456698830436725048, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456698830436725048, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456698830436725048, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456698830436725048, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456698830436725048, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6907749195571495463, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -47199,11 +47419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267581499975383263, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -115.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7267581499975383263, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -75.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7415256374366318951, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -47212,6 +47432,46 @@ PrefabInstance:
     - target: {fileID: 7415256374366318951, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_isOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637880883871265880, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677803138938685907, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768767734998213386, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 462
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768767734998213386, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768767734998213386, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 637
       objectReference: {fileID: 0}
     - target: {fileID: 7959557023729806921, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -47246,6 +47506,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7959557023729806921, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959557023729806921, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -47259,13 +47523,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970965021998229340, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 590
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7970965021998229340, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970965021998229340, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 215
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3943510211479145459, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+    - {fileID: 5318301438311050026, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6006181739721974810, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 677115330}
+    - targetCorrespondingSourceObject: {fileID: 2734327231740326355, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3349775865341183204}
   m_SourcePrefab: {fileID: 100100000, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+--- !u!1 &3349775865341183203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2734327231740326355, guid: 93c1877b1d4c6e94580b3ace5d2dc70b, type: 3}
+  m_PrefabInstance: {fileID: 3349775865341183202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3349775865341183204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349775865341183203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1946a6ad062b2d44b8ee13b0f2becfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.5}
+  shadowDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
+  iterations: 20
+  shadowSpread: {x: 5, y: 5}
 --- !u!1001 &3396284697236412901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47739,6 +48041,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_isOn
       objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818206101629711444, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183053918459124245, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c5c59f85c86fd0468f82012feb2ccdd, type: 3}
+    - target: {fileID: 2183053918459124245, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183053918459124245, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183053918459124245, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.90588236
+      objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -47765,11 +48107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 433
+      value: 865
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 130
+      value: 234
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47801,11 +48143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 492
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1495
+      value: -677
       objectReference: {fileID: 0}
     - target: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -47823,9 +48165,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExploreMore
       objectReference: {fileID: 0}
+    - target: {fileID: 6546655024911115200, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546655024911115200, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4491385497114585051, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 189913687}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a072630bc491246bd7a7d1c5bf1fe5, type: 3}
 --- !u!224 &6268376864114977845 stripped

@@ -33,12 +33,31 @@ public class UI_TweenScale_Backward : MonoBehaviour
     public UnityEvent tweenEvent;
     public UnityEvent tweenBackwardEvent;
 
+    [HideInInspector] public bool isPaused = false;
+
     Transform _transform;
     Image _image;
     Vector3 _initScale;
     Quaternion _initRot;
     float _initAlpha;
     Coroutine _routine;
+
+    IEnumerator WaitWhilePaused()
+    {
+        while (isPaused)
+            yield return null;
+    }
+
+    private IEnumerator WaitWithPause(float delay)
+    {
+        float timer = 0f;
+        while (timer < delay)
+        {
+            if (!isPaused)
+                timer += Time.deltaTime;
+            yield return null;
+        }
+    }
 
     void Awake()
     {
@@ -51,6 +70,8 @@ public class UI_TweenScale_Backward : MonoBehaviour
 
     void OnEnable()
     {
+        TimelineSequenceController.ActiveController.uiScaler = this;
+        isPaused = TimelineSequenceController.ActiveController.IsUserPaused;
         if (playAtAwake) Play();
     }
 
@@ -90,24 +111,37 @@ public class UI_TweenScale_Backward : MonoBehaviour
             yield break;
         }
 
-        for (float t = 0f; ; t += speed * Time.deltaTime)
+        float t = 0f;
+        Apply(main.Evaluate(t), t);
+
+        while (true)
         {
-            if (t > duration)
-                t = isLoop ? t % duration : duration;
+            // HOLD here — do not advance time while paused.
+            yield return StartCoroutine(WaitWhilePaused());
+
+            if (speed > 0f)
+                t += speed * Time.deltaTime;
+
+            if (t >= duration)
+                t = isLoop ? Mathf.Repeat(t, duration) : duration;
 
             Apply(main.Evaluate(t), t);
 
             if (t >= duration && !isLoop) break;
+
             yield return null;
         }
 
-        yield return new WaitForSeconds(delayeventby);
+        // Pause-aware post-tween delay
+        if (delayeventby > 0f)
+            yield return StartCoroutine(WaitWithPause(delayeventby));
+
 
         if (backward)
             tweenBackwardEvent?.Invoke();
         else
             tweenEvent?.Invoke();
-    }
+    }   
 
     void Apply(float value, float t)
     {

@@ -8,6 +8,7 @@ public class TimelineSequenceController : MonoBehaviour
     [Header("References")]
     public PlayableDirector timelineDirector;
     public UITextTypewriter typewriter;
+    public UI_TweenScale_Backward uiScaler;
 
     [Header("UI (Optional)")]
     public Button playPauseButton;
@@ -17,12 +18,17 @@ public class TimelineSequenceController : MonoBehaviour
     public static TimelineSequenceController ActiveController;
 
     private bool isHoldingForText = false;
-    private static bool isUserPaused = false;
+    private bool isUserPaused = false;
+    public bool IsUserPaused => isUserPaused;
 
     private void OnEnable()
     {
-        // Set this as the active controller so the UI button talks to it
-        ActiveController = this;       
+        if (ActiveController != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        ActiveController = this;
     }
 
     public void PauseTimeline()
@@ -34,6 +40,7 @@ public class TimelineSequenceController : MonoBehaviour
             isUserPaused = false;
 
             if (typewriter != null) typewriter.isPaused = isUserPaused;
+            if (uiScaler != null) uiScaler.isPaused = isUserPaused;
             if (buttonText != null) buttonText.text = "Pause";
         }
     }
@@ -63,6 +70,7 @@ public class TimelineSequenceController : MonoBehaviour
             // --- RESUME ---
             isUserPaused = false;
             if (typewriter != null) typewriter.isPaused = false;
+            if (uiScaler != null) uiScaler.isPaused = false;
 
             // Only resume timeline if the text isn't still typing
             if (!isHoldingForText && timelineDirector != null)
@@ -76,17 +84,10 @@ public class TimelineSequenceController : MonoBehaviour
             isUserPaused = true;
             if (timelineDirector != null) timelineDirector.Pause();
             if (typewriter != null) typewriter.isPaused = true;
+            if (uiScaler != null) uiScaler.isPaused = true;
 
             if (buttonText != null) buttonText.text = "Play";
         }
-    }
-
-    /// <summary>
-    /// Static method for UI buttons to call without needing a direct reference.
-    /// </summary>
-    public static void GlobalTogglePlayPause()
-    {
-        if (ActiveController != null)
-            ActiveController.TogglePlayPause();
-    }
+    }    
+    
 }
