@@ -175,7 +175,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -673,7 +673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &24090621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2328,6 +2328,8 @@ GameObject:
   - component: {fileID: 101075731}
   - component: {fileID: 101075730}
   - component: {fileID: 101075729}
+  - component: {fileID: 101075732}
+  - component: {fileID: 101075733}
   m_Layer: 0
   m_Name: freny
   m_TagString: Untagged
@@ -2410,6 +2412,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101075727}
   m_CullTransparentMesh: 1
+--- !u!114 &101075732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101075727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4094a9ed5176dd34294e51ebb9bb4f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - name: Default
+    frames:
+    - {fileID: 21300000, guid: 933c3e031f64ca74485e6fd9de725e71, type: 3}
+    - {fileID: 21300000, guid: 0efe3cb3a8fdc934093e785dbf6fc5ed, type: 3}
+    - {fileID: 21300000, guid: 21c4435a5b4bf0842853cab6aa3700d3, type: 3}
+    - {fileID: 21300000, guid: 64154ed5094c4784b81b643929bf5af8, type: 3}
+    frameRate: 2
+    loop: 1
+  defaultState: Default
+  transitions: []
+  playOnAwake: 1
+  preserveAspect: 1
+  currentClip:
+    name: 
+    frames: []
+    frameRate: 12
+    loop: 1
+--- !u!95 &101075733
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101075727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &102363766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,7 +2700,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339103522}
+        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
+        m_MethodName: OnTypewriterFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   text: {fileID: 112422594}
   playOnEnable: 0
   autoRepeat: 0
@@ -2828,7 +2893,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -7370,7 +7435,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -8806,6 +8871,8 @@ PlayableDirector:
     value: {fileID: 1669211415}
   - key: {fileID: 6403026899914695026, guid: 4ed458eb00bdd3b4ea9c0b7fcd8fbfb9, type: 2}
     value: {fileID: 1849516696}
+  - key: {fileID: 2729488337580583051, guid: 4ed458eb00bdd3b4ea9c0b7fcd8fbfb9, type: 2}
+    value: {fileID: 101075733}
   m_ExposedReferences:
     m_References:
     - c82ce3c09777f8f4499116b46204566f: {fileID: 1610347196}
@@ -8991,7 +9058,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -10119,7 +10186,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -15231,7 +15298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &594039234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15273,6 +15340,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8a39244e803d75945ad471ddb0f34dd2, type: 2}
     - {fileID: 11400000, guid: ca668b1912c0d344aa04e551317d7cfc, type: 2}
     - {fileID: 11400000, guid: b07ccf63849fab0438d7139ea7e41066, type: 2}
+    - {fileID: 11400000, guid: 7ea2eb43c8039e5439813f041fafdf8c, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -15376,7 +15444,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -15398,6 +15466,20 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 594039239}
+          m_TargetAssemblyTypeName: UIImageSpriteAnimator, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Default
             m_BoolArgument: 1
           m_CallState: 2
 --- !u!222 &594039237
@@ -15436,18 +15518,16 @@ MonoBehaviour:
   animations:
   - name: Default
     frames:
-    - {fileID: 0}
     - {fileID: 21300000, guid: ff3257590b43cbb428ec58b1889261a3, type: 3}
     - {fileID: 21300000, guid: 62f123d6fd545ad4ca158165374108b7, type: 3}
     - {fileID: 21300000, guid: dd49babe4881fc44eb3fbd978d5d48e1, type: 3}
     - {fileID: 21300000, guid: a4e555a8553615e4599b188105cd6dc8, type: 3}
-    - {fileID: 21300000, guid: 13e1641ec74577249a00e14db8c83990, type: 3}
-    frameRate: 2
-    loop: 1
+    frameRate: 1.5
+    loop: 0
   defaultState: Default
   transitions: []
-  playOnAwake: 1
-  preserveAspect: 1
+  playOnAwake: 0
+  preserveAspect: 0
   currentClip:
     name: 
     frames: []
@@ -16132,6 +16212,18 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 339103522}
+        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
+        m_MethodName: OnTypewriterFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 156980475}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17822,7 +17914,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -21820,7 +21912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: 1313}
+  m_AnchoredPosition: {x: 23, y: 1408}
   m_SizeDelta: {x: 793.0434, y: 262.4033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878139599
@@ -21837,7 +21929,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTypingComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339103522}
+        m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
+        m_MethodName: OnTypewriterFinished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   text: {fileID: 878139600}
   playOnEnable: 1
   autoRepeat: 0
@@ -22380,7 +22484,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -23293,7 +23397,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -23916,7 +24020,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -24684,7 +24788,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -27477,7 +27581,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -32806,7 +32910,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -33097,7 +33201,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -34786,7 +34890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 206.67006, y: 2169.625}
+  m_AnchoredPosition: {x: 421, y: 2327}
   m_SizeDelta: {x: 509.1235, y: 373.9647}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1437295868
@@ -46783,7 +46887,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -47195,7 +47299,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -47206,7 +47310,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
+        m_CallState: 0
   text: {fileID: 1919137982}
   playOnEnable: 1
   autoRepeat: 0
@@ -47691,7 +47795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9981.2, y: -1075.2}
+  m_AnchoredPosition: {x: -2174.2002, y: -1075.2}
   m_SizeDelta: {x: 783, y: 1313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936428365
@@ -49335,7 +49439,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -49767,7 +49871,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
-          m_CallState: 2
+          m_CallState: 0
         - m_Target: {fileID: 1919137978}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -50250,7 +50354,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
@@ -50758,7 +50862,7 @@ MonoBehaviour:
   onTypingComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 339103522}
         m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
         m_MethodName: OnTypewriterFinished
         m_Mode: 1
