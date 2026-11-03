@@ -45,6 +45,20 @@ public class TimelineSequenceController : MonoBehaviour
         }
     }
 
+    public void ResumeTimeline()
+    {
+        if (timelineDirector != null && timelineDirector.state == PlayState.Paused)
+        {
+            timelineDirector.Play();
+            isHoldingForText = false;
+            isUserPaused = false;
+
+            if (typewriter != null) typewriter.isPaused = isUserPaused;
+            if (uiScaler != null) uiScaler.isPaused = isUserPaused;
+            if (buttonText != null) buttonText.text = "Play";
+        }
+    }
+
 
     /// <summary>
     /// Hook this to the Typewriter's onTypingEnd event.
