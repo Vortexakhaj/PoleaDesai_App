@@ -1,6 +1,8 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -17,6 +19,7 @@ public class UITextTypewriterObjectEnabler : UITextTypewriter
         public string triggerPhrase;
         [Tooltip("The GameObject to activate.")]
         public GameObject targetObject;
+        public UnityEvent objectEvent;
     }
 
     [Header("Word Object Enabler")]
@@ -61,6 +64,7 @@ public class UITextTypewriterObjectEnabler : UITextTypewriter
                 if (visibleText.IndexOf(link.triggerPhrase, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     link.targetObject.SetActive(true);
+                    link.objectEvent?.Invoke();
                 }
             }
         }
