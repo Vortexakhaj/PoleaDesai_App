@@ -1550,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071277003647397816, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_Name
-      value: Buttons (1)
+      value: ExploreMore
       objectReference: {fileID: 0}
     - target: {fileID: 3120182335318143197, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7005,6 +7005,8 @@ RectTransform:
   - {fileID: 1029847460}
   - {fileID: 152799083}
   - {fileID: 1074172186}
+  - {fileID: 339103521}
+  - {fileID: 1125324518}
   m_Father: {fileID: 534941342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8854,12 +8856,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339103519}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 960, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 277439285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &339103522
 MonoBehaviour:
@@ -27742,13 +27744,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125324516}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1080, y: -1920, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2095953848}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 277439285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1125324519
 MonoBehaviour:
@@ -34430,7 +34432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071277003647397816, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_Name
-      value: Buttons (3)
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 2794204599009210933, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_Color.b
@@ -39210,7 +39212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071277003647397816, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_Name
-      value: Buttons (2)
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 3120182335318143197, guid: 9d7bf5dc7a09dd941ad14098a61c428a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -56235,6 +56237,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 955827784}
   - {fileID: 543811961}
-  - {fileID: 339103521}
   - {fileID: 2068280597}
-  - {fileID: 1125324518}
