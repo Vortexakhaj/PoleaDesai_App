@@ -21,7 +21,7 @@ public class TimelineSequenceController : MonoBehaviour
     private bool isUserPaused = false;
     public bool IsUserPaused => isUserPaused;
 
-    private void OnEnable()
+    private void Awake()
     {
         if (ActiveController != null)
         {
