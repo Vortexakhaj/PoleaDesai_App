@@ -9,6 +9,7 @@ public class TimelineSequenceController : MonoBehaviour
     public PlayableDirector timelineDirector;
     public UITextTypewriter typewriter;
     public UI_TweenScale_Backward uiScaler;
+    public AudioTriggerOnCue audioCue, suppressCue;
 
     [Header("UI (Optional)")]
     public Button playPauseButton;
@@ -85,6 +86,8 @@ public class TimelineSequenceController : MonoBehaviour
             isUserPaused = false;
             if (typewriter != null) typewriter.isPaused = false;
             if (uiScaler != null) uiScaler.isPaused = false;
+            if (audioCue != null && !audioCue.MainSource.isPlaying) audioCue.MainSource.UnPause();
+            if (suppressCue != null && !audioCue.MainSource.isPlaying) suppressCue.MainSource.UnPause();
 
             // Only resume timeline if the text isn't still typing
             if (!isHoldingForText && timelineDirector != null)
@@ -99,6 +102,8 @@ public class TimelineSequenceController : MonoBehaviour
             if (timelineDirector != null) timelineDirector.Pause();
             if (typewriter != null) typewriter.isPaused = true;
             if (uiScaler != null) uiScaler.isPaused = true;
+            if (audioCue != null) audioCue.MainSource.Pause();
+            if (suppressCue != null) suppressCue.MainSource.Pause();
 
             if (buttonText != null) buttonText.text = "Play";
         }

@@ -4,7 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioTriggerOnCue : MonoBehaviour
 {
-    [SerializeField] AudioSource mainSource;      
+    [HideInInspector] public bool isPaused;
+    [SerializeField] AudioSource mainSource;
+    public AudioSource MainSource => mainSource;
 
     public void PlayAudioClipImmediate(AudioClip clip)
     {        
@@ -16,4 +18,6 @@ public class AudioTriggerOnCue : MonoBehaviour
         mainSource.clip = clip;
         mainSource.Play();
     }   
+
+
 }
