@@ -77,7 +77,7 @@ public class BubbleManager : MonoBehaviour
         {
             // Limit reached! Remove the OLDEST selected bubble (index 0)
             MemoryBubble oldestBubble = currentSelectionOrder[0];
-            oldestBubble.ForceDeselect(); // Tell the old bubble to turn off its visual selection
+            oldestBubble.ForceDeselect(true); // Tell the old bubble to turn off its visual selection
 
             currentSelectionOrder.RemoveAt(0); // Remove from list
 

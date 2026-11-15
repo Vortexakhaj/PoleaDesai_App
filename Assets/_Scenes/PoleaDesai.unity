@@ -7108,7 +7108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277439285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9551,15 +9551,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.2691849
       objectReference: {fileID: 0}
     - target: {fileID: 7224202130709519914, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13949,11 +13949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMin.y
@@ -14901,7 +14901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showEditor: 0
-  screenIndex: 5
+  screenIndex: 0
   screenToggler: {fileID: 534941340}
 --- !u!224 &534941342
 RectTransform:
@@ -19673,7 +19673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &765451163
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27517,7 +27517,7 @@ MonoBehaviour:
   primeOnEnable: 0
   deactivateWhenHidden: 0
   hiddenAlphaThreshold: 0.01
-  delayeventby: 0
+  delayeventby: 3
   animEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -40147,15 +40147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.2691849
       objectReference: {fileID: 0}
     - target: {fileID: 7224202130709519914, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -51915,6 +51915,7 @@ MonoBehaviour:
   - {fileID: 1807359529}
   resetIntervalDays: 10
   maxConcurrentSelections: 3
+  currentSelectionOrder: []
   doneButton: {fileID: 180247191}
   minSelectionsToEnableDone: 1
   doneDelay: 1.5
@@ -52049,10 +52050,10 @@ MonoBehaviour:
     achar, roti, aalo boti,
     pulao, custard, and patra ni machi.
 
-    
 
-    But the moment her favorite
-    bhaji dana ma gosht is served,
+
+    But the moment her favorite bhaji
+    dana ma gosht is served,
 
     she tells her children....'
   m_isRightToLeft: 0
@@ -55309,6 +55310,10 @@ PrefabInstance:
       propertyPath: ShapeProperties.DrawOutlineShadow
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 218613761978729427, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
+      propertyPath: thresholdClickCount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1399290876760336338, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_text
       value: "Growing up in \nthe vibrant <i>pols</i>\nof Navsari"
@@ -56215,15 +56220,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6685249883377576387, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.06038153
       objectReference: {fileID: 0}
     - target: {fileID: 7224202130709519914, guid: 10e0d6b75c2974f419b725ca2082b7b0, type: 3}
       propertyPath: m_AnchorMax.y

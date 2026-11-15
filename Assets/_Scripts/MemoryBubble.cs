@@ -94,7 +94,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
         if (isCurrentlySelected)
         {
             // DESELECT LOGIC (User clicked a bubble they already selected)
-            ForceDeselect(); // Reuse this method to avoid duplicate code
+            ForceDeselect(true); // Reuse this method to avoid duplicate code
             if (manager != null) manager.RegisterDeselection(this);
         }
         else
@@ -130,10 +130,11 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
     }
 
     // The Manager calls this to remotely kick the oldest bubble out of the selection
-    public void ForceDeselect()
+    public void ForceDeselect(bool reduceCount)
     {
+        if (selectionCount > 0 && reduceCount) SelectionCount--;
+        else if (reduceCount) selectionCount = 0;
         isCurrentlySelected = false;
-        SelectionCount--;
         if (bubbleImage != null)
         {
             FillColor(normalColor);
@@ -150,7 +151,7 @@ public class MemoryBubble : MonoBehaviour, IPointerClickHandler
             }
         }
         // Reset the visual selection state for the next visitor
-        ForceDeselect();
+        ForceDeselect(false);
     }
 
     private void GrowBubble()

@@ -70,8 +70,11 @@ public class UI_TweenScale_Backward : MonoBehaviour
 
     void OnEnable()
     {
-        TimelineSequenceController.ActiveController.uiScaler = this;
-        isPaused = TimelineSequenceController.ActiveController.IsUserPaused;
+        if (TimelineSequenceController.ActiveController != null)
+        {
+            TimelineSequenceController.ActiveController.uiScaler = this;
+            isPaused = TimelineSequenceController.ActiveController.IsUserPaused;
+        }
         if (playAtAwake) Play();
     }
 
@@ -141,7 +144,7 @@ public class UI_TweenScale_Backward : MonoBehaviour
             tweenBackwardEvent?.Invoke();
         else
             tweenEvent?.Invoke();
-    }   
+    }
 
     void Apply(float value, float t)
     {

@@ -129,8 +129,11 @@ public class UITextTypewriter : MonoBehaviour
     {
         //onTypingComplete.AddListener(TimelineSequenceController.ActiveController.OnTypewriterFinished);
 
-        TimelineSequenceController.ActiveController.typewriter = this;
-        isPaused = TimelineSequenceController.ActiveController.IsUserPaused;
+        if (TimelineSequenceController.ActiveController != null)
+        {
+            TimelineSequenceController.ActiveController.typewriter = this;
+            isPaused = TimelineSequenceController.ActiveController.IsUserPaused;
+        }
         if (playOnEnable)
         {
             StartTypewriter();
