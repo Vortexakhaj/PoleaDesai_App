@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.069336, y: -13.287109}
+  m_AnchoredPosition: {x: 50, y: -1}
   m_SizeDelta: {x: 563.4585, y: 215.794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5128124
@@ -229,11 +229,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sometimes malai, sometimes pista if you were lucky, always melting faster
-    than I could eat it. '
+  m_text: 'Sometimes <i>malai</i>, sometimes pista if you were lucky, always melting
+    faster than I could eat it. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -257,8 +257,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.8312988, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1217,7 +1217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 296, y: 552}
+  m_AnchoredPosition: {x: 278, y: 521}
   m_SizeDelta: {x: 804.804, y: 496.3091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48967647
@@ -2498,7 +2498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 0}
+  m_AnchoredPosition: {x: 14, y: 22}
   m_SizeDelta: {x: 680.5567, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102363769
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -2573,8 +2573,8 @@ MonoBehaviour:
   m_text: 'As children, we jumped from one house to the next like they were all ours.
     You could always catch the aroma of what each <i>gher</i> was cooking. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2598,8 +2598,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2683,7 +2683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -612, y: 212}
+  m_AnchoredPosition: {x: -604, y: 208}
   m_SizeDelta: {x: 601.3469, y: 658.1257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112422593
@@ -2727,8 +2727,8 @@ MonoBehaviour:
   delayAfterPunctuation: 0
   trailingChar: 
   stories:
-  - Freny arrives with her children, Zubin and Delnaz at the Maidyarem Gahambar in
-    Mumbai - one of the six sacred seasonal festivals in the Zoroastrian calendar,
+  - Freny arrives with her children, Zubin and Delnaz at the <i>Maidyarem Gahambar</i>
+    in Mumbai, one of the six sacred seasonal festivals in the Zoroastrian calendar,
     celebrated during the mid-winter solstice.
   - "She spots everyone she hasn\u2019t seen in months: neighbors, family friends,
     and familiar faces from years gone by. Everyone sits together in long rows, sharing
@@ -2761,8 +2761,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Freny arrives with her children, Zubin and Delnaz at the Maidyarem Gahambar
-    in Mumbai - one of the six sacred seasonal festivals in the Zoroastrian calendar,
+  m_text: Freny arrives with her children, Zubin and Delnaz at the <i>Maidyarem Gahambar</i>
+    in Mumbai, one of the six sacred seasonal festivals in the Zoroastrian calendar,
     celebrated during the mid-winter solstice.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
@@ -2802,7 +2802,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -11
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3207,8 +3207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 409, y: 281}
-  m_SizeDelta: {x: 1037.5494, y: 639.8394}
+  m_AnchoredPosition: {x: 402, y: 201}
+  m_SizeDelta: {x: 1306.072, y: 805.433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117664845
 MonoBehaviour:
@@ -3315,9 +3315,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49ac02b2ac3e5354790bd40c3d3967ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55f92f6828a647f4fa04dbb139464711, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3466,8 +3466,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Oh my God. This is it. This is exactly it.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3491,8 +3491,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3719,11 +3719,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -4249,8 +4249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -277.40112, y: 2458}
-  m_SizeDelta: {x: 1187.8062, y: 733.2286}
+  m_AnchoredPosition: {x: -152, y: 1632}
+  m_SizeDelta: {x: 1502.235, y: 927.324}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &168365996
 MonoBehaviour:
@@ -4369,9 +4369,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49ac02b2ac3e5354790bd40c3d3967ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55f92f6828a647f4fa04dbb139464711, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5281,7 +5281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &216084778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5298,7 +5298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: 1313}
+  m_AnchoredPosition: {x: 23, y: 1433}
   m_SizeDelta: {x: 793.0434, y: 262.4033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216084780
@@ -5382,11 +5382,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: She looks down at the food. Something feels different. She takes her first
-    bite.
+  m_text: 'She looks down at the food.
+
+
+    Something feels different. She takes
+    her first bite.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6030,10 +6033,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: She starts walking down the <i>mohalla</i> and pauses outside the library.
+  m_text: She starts walking down the <i>mohalla</i> and pauses outside the Meherji
+    Rana Library.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6057,8 +6061,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7356,7 +7360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: 1425.751}
+  m_AnchoredPosition: {x: -124, y: 1441}
   m_SizeDelta: {x: 1152.2878, y: 262.7971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277482494
@@ -7428,13 +7432,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The fifth house on the right in the <i>Mohalla of Desai Pol</i> was her
-    family home before she got married and moved to Bombay. Her house was almost
-    350 years old. All the Desais lived in the same <i>pol</i>, every home sharing
-    the same connected <i>otla</i> (veranda).
+  m_text: 'The 5th house on the right in the <i>mohalla of Desai Pol</i> was her
+    family home before she got married and moved to Bombay.
+
+
+    Her house was almost
+    350 years old. All the <i>Desais</i> lived in the same pol, every home sharing
+    the same connected <i>otla</i> (veranda).'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7458,8 +7465,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7543,7 +7550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 18}
+  m_AnchoredPosition: {x: 42, y: 82}
   m_SizeDelta: {x: 533.0042, y: 285.1874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280702821
@@ -7615,11 +7622,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: On Fridays in winter, she would make my favorite - <i>bhaji dana ma gosht</i>.
-    This tastes exactly like hers.
+  m_text: "On Fridays in winter, she would make my favorite <i>bhaji dana ma gosht</i>.
+    \nThis tastes exactly like hers."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7643,8 +7650,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7655,9 +7662,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -11
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 60
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -8737,6 +8744,18 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 2095953847}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 339103522}
           m_TargetAssemblyTypeName: TimelineSequenceController, Assembly-CSharp
           m_MethodName: PauseTimeline
@@ -8814,11 +8833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -9163,7 +9182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33, y: -3.2243958}
+  m_AnchoredPosition: {x: 33, y: 87}
   m_SizeDelta: {x: 768.4854, y: 308.6932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342223899
@@ -9236,11 +9255,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "We used to come here all the time. The Meherji Rana Library was the one
-    place no parent ever questioned.\r \nJust say, <i>\u2018Hoon library jau chhu\u2019</i>
+    place no parent ever questioned.\r \n\nJust say, <i>\u2018Hoon library jau chhu\u2019</i>
     (I am going to the library and you were out the door.)\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9264,8 +9283,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9278,7 +9297,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -9303,7 +9322,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 1.8312988, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &342223901
@@ -9688,8 +9707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -177, y: 2582}
-  m_SizeDelta: {x: 836.0002, y: 516.06}
+  m_AnchoredPosition: {x: -251, y: 2587.6003}
+  m_SizeDelta: {x: 831.814, y: 513.476}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &350545454
 MonoBehaviour:
@@ -10315,8 +10334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.049072, y: 13.6953125}
-  m_SizeDelta: {x: 657.5566, y: 262.4033}
+  m_AnchoredPosition: {x: 20.130005, y: 21.929794}
+  m_SizeDelta: {x: 692.74, y: 371.213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &376150595
 MonoBehaviour:
@@ -10387,11 +10406,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You see, dikras, Navsari wasn't just a place-it was an entire world of
-    its own. It's the very soul of our community. That is where we come from.
+  m_text: "You see, <i>dikras</i>, Navsari wasn't just a place\u2014it was an entire
+    world of its own.\n\nIt is the very soul of our community. That is where we come
+    from.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10415,8 +10435,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10429,7 +10449,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -10451,7 +10471,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.8312988, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10770,8 +10790,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 83, y: 226}
-  m_SizeDelta: {x: 897.62, y: 553.5471}
+  m_AnchoredPosition: {x: 137, y: 194.15186}
+  m_SizeDelta: {x: 897.62, y: 607.243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390436041
 MonoBehaviour:
@@ -10793,9 +10813,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49ac02b2ac3e5354790bd40c3d3967ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a887cbdf99691854894d6cf4571e5b88, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10944,11 +10964,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -11992,8 +12012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 437, y: 2242}
-  m_SizeDelta: {x: 799.001, y: 629.613}
+  m_AnchoredPosition: {x: 349.78186, y: 2265.9521}
+  m_SizeDelta: {x: 772.554, y: 641.413}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &450688539
 MonoBehaviour:
@@ -12102,7 +12122,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a3d614a70e60eac45aeb1adaa8e9000a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -15969,7 +15989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ff3257590b43cbb428ec58b1889261a3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16772,16 +16792,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tamne te taste pan nahi malse. Navsari ni vaat aj alag hati. Tyanu paani,
-    tyani hawa, thayu cooking. Aa toh bas tyaj bane, biju kyay nahi.
+  m_text: '<i>Tamne te taste pan nahi malse. Navsari ni vaat aj alag hati. Tyanu
+    paani, tyani hawa, ane cooking...aa toh bas tyaj bane, biju kyay nahi.</i>
 
 
     <size=30>(You''ll
-    never get that taste here. The food in Navsari was something else -the air, the
-    water, the way it was cooked. This can only be made there, nowhere else.)</size>'
+    never get that taste here. The food in Navsari was something else, the air, the
+    water, the cooking... this can only be made there, nowhere else.)</size>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16805,8 +16825,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16819,7 +16839,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: -11
+  m_paragraphSpacing: -35
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -17913,8 +17933,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17938,8 +17958,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18004,7 +18024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.58606, y: 1264.0522}
+  m_AnchoredPosition: {x: -434, y: 1263}
   m_SizeDelta: {x: 955.8713, y: 120.2988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &673450188
@@ -18503,7 +18523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55, y: -8}
+  m_AnchoredPosition: {x: 71, y: 3}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688622090
@@ -18575,12 +18595,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My walks back home from school  would take me right past it, and the sound
-    of the priests  praying in an ancient language while I walked the streets remains
-    close to my heart.
+  m_text: My walks back home from school would take me right past it, and the sound
+    of the priests praying while I walked the streets remains close to my heart.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18604,13 +18623,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -18724,7 +18743,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -18761,11 +18780,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'We didn''t realize it then but sitting there as kids, doing homework inside
-    one of the world''s most important Zoroastrian libraries '
+  m_text: 'We didn''t realize it then but sitting here as kids, doing homework inside
+    one of the world''s most important Zoroastrian libraries - '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18789,13 +18808,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -20108,8 +20127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76, y: 856}
-  m_SizeDelta: {x: 1007, y: 621}
+  m_AnchoredPosition: {x: -56, y: 850}
+  m_SizeDelta: {x: 958.886, y: 591.329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772588266
 MonoBehaviour:
@@ -20970,11 +20989,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -21490,11 +21509,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -22555,7 +22574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &878139597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22572,8 +22591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: 1408}
-  m_SizeDelta: {x: 793.0434, y: 262.4033}
+  m_AnchoredPosition: {x: 82.141, y: 1473}
+  m_SizeDelta: {x: 911.33, y: 421.398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878139599
 MonoBehaviour:
@@ -22644,12 +22663,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: She takes another bite, slowly savouring it with a piece of rotli, and
-    pauses. She can't believe it. The bustling hall around her fades into the background.
-    She goes quiet.
+  m_text: 'She takes another bite, slowly savouring it with a piece of <i>rotli</i>,
+    and pauses.
+
+
+    She can''t believe it. The bustling hall around her fades into
+    the background.
+
+
+    She goes quiet.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23212,7 +23237,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b><color=#D29000>ACKNOWLEDGEMENTS</color></b>
 
-
     This exhibit is researched
     and designed by
 
@@ -23260,8 +23284,8 @@ MonoBehaviour:
 
     For their support, stories and insights that shaped the exhibit.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95ab5897e14641a4e8c51b81155ab937, type: 2}
-  m_sharedMaterial: {fileID: -3447000513396954358, guid: 95ab5897e14641a4e8c51b81155ab937, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23285,8 +23309,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23321,7 +23345,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.8312988, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -23879,7 +23903,7 @@ GameObject:
   - component: {fileID: 914081775}
   - component: {fileID: 914081776}
   m_Layer: 0
-  m_Name: BIrd
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24106,10 +24130,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "She had almost forgotten that she wasn\u2019t in Navsari\u2026.\r\n"
+  m_text: "She had almost forgotten that she wasn\u2019t in Navsari....\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24133,8 +24157,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24891,7 +24915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: -16}
+  m_AnchoredPosition: {x: 73, y: 19}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961936055
@@ -24926,7 +24950,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -24963,11 +24987,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ahh! That sound\u2026 It brings me so much peace\u2026On days I felt overwhelmed,
-    I would visit the\nAtash Bahram."
+  m_text: "Ahh! That sound\u2026 It brings me so much peace.\n\nOn days I felt overwhelmed,
+    I would visit the Atash Bahram."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24991,13 +25015,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -25005,7 +25029,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -25425,7 +25449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 27}
+  m_AnchoredPosition: {x: 26, y: 33}
   m_SizeDelta: {x: 680.5567, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976833525
@@ -25497,11 +25521,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <i>Zarine Aunty would always call  me whenever she was cooking something
-    I loved</i>.
+  m_text: Zarine aunty would always call  me whenever she was cooking something I
+    loved.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25525,8 +25549,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26248,8 +26272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -163, y: 1801}
-  m_SizeDelta: {x: 842, y: 612}
+  m_AnchoredPosition: {x: -170, y: 1791}
+  m_SizeDelta: {x: 1166.61, y: 681.72}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1034127852
 MonoBehaviour:
@@ -26273,7 +26297,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 12c970df3d65d2d4699adfeaa96a5df1, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -27125,7 +27149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 333, y: 359}
+  m_AnchoredPosition: {x: 355, y: 330}
   m_SizeDelta: {x: 1037.5494, y: 639.8394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084792611
@@ -28346,7 +28370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55, y: 10}
+  m_AnchoredPosition: {x: 64, y: 94}
   m_SizeDelta: {x: 783.1685, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141248458
@@ -28418,12 +28442,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: in fact, until the late 1900s, even the aalat-the sacred ritual implements
-    were sourced in Navsari, and priests travelled on foot from here to the fire
-    temples in Mumbai and Surat, bringing the <i>aalat</i> for them.
+  m_text: "In fact, until the late 1900s, even the <i>aalat</i>\u2014the sacred ritual
+    implements were sourced in Navsari and priests travelled on foot from here to
+    the fire temples in Mumbai and Surat bringing the <i>aalat</i> them."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28447,8 +28471,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28792,11 +28816,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -30151,11 +30175,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -30352,7 +30376,7 @@ GameObject:
   - component: {fileID: 1209125595}
   - component: {fileID: 1209125599}
   m_Layer: 0
-  m_Name: BIrd (5)
+  m_Name: Bird (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32583,10 +32607,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "But for her, there was always\u2026 \n\n<i>Kolahji!</i>"
+  m_text: 'But for her, there was always...
+
+
+    Kolahji!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -32610,8 +32637,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -32624,7 +32651,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -32876,8 +32903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 174.2976, y: 1987.25}
-  m_SizeDelta: {x: 1113.9016, y: 687.6072}
+  m_AnchoredPosition: {x: 174.2976, y: 1881}
+  m_SizeDelta: {x: 1328.933, y: 820.345}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1322050172
 MonoBehaviour:
@@ -32996,9 +33023,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49ac02b2ac3e5354790bd40c3d3967ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55f92f6828a647f4fa04dbb139464711, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -34109,11 +34136,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: She reaches for the last piece of chapati, wipes the leaf clean, and finishes
-    her meal in celebration of the food and the winter solstice.
+  m_text: She reaches for the last piece of <i>rotli</i>, wipes the leaf clean, and
+    finishes her meal in celebration of the food and the winter solstice.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34137,8 +34164,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34328,8 +34355,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -386, y: -308}
-  m_SizeDelta: {x: 601.3469, y: 658.1257}
+  m_AnchoredPosition: {x: -180.22403, y: -153.83716}
+  m_SizeDelta: {x: 1012.926, y: 349.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395655020
 MonoBehaviour:
@@ -34401,10 +34428,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "As she admires the Atash Behram from outside she takes a closer look at
-    the Palm trees\u2026It takes her back to the hot summer holidays in Navsari. "
+    the palm trees\u2026\r\n\nIt takes her back to the hot summer holidays in Navsari.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34440,9 +34467,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -8
+  m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -34464,7 +34491,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -375.56702, w: 441.07568}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -35227,7 +35254,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
 --- !u!114 &1410511694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35968,8 +35995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63, y: -43}
-  m_SizeDelta: {x: 821.8521, y: 285.1874}
+  m_AnchoredPosition: {x: 32, y: 7}
+  m_SizeDelta: {x: 580.892, y: 137.934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431577409
 MonoBehaviour:
@@ -36040,10 +36067,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Freny, <i>gher</i> aao, I have made your favorite Shiro!
+  m_text: Freny, <i>gher</i> aao, I have made your favorite <i>shiro!</i>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36067,8 +36094,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.2
-  m_fontSizeBase: 63.2
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36135,7 +36162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1437295867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36153,8 +36180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3, y: 2655}
-  m_SizeDelta: {x: 509.1235, y: 373.9647}
+  m_AnchoredPosition: {x: 150, y: 2629}
+  m_SizeDelta: {x: 617.837, y: 439.521}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1437295868
 MonoBehaviour:
@@ -36937,11 +36964,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -38488,8 +38515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 401, y: 427}
-  m_SizeDelta: {x: 1007, y: 621}
+  m_AnchoredPosition: {x: 418, y: 383}
+  m_SizeDelta: {x: 1007, y: 819.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560709362
 MonoBehaviour:
@@ -38511,9 +38538,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49ac02b2ac3e5354790bd40c3d3967ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec6a73e96124f234cbf67a18fc6fa98f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -38661,7 +38688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: -27}
+  m_AnchoredPosition: {x: 26, y: -13}
   m_SizeDelta: {x: 553.4635, y: 230.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575813839
@@ -38696,7 +38723,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -38733,11 +38760,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Every day, Bapu would come home for bhonu, and Mom would serve hot food
-    for the whole family.
+  m_text: Every day, <i>Bapu</i> would come home for <i>bhonu</i>, and <i> Mummy</i>
+    would serve hot food for the whole family.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -38761,8 +38788,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -38773,7 +38800,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -11
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -42984,7 +43011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705362480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1946a6ad062b2d44b8ee13b0f2becfe4, type: 3}
   m_Name: 
@@ -43279,7 +43306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1946a6ad062b2d44b8ee13b0f2becfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadowColor: {r: 0, g: 0, b: 0, a: 1}
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.2901961}
   shadowDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
   iterations: 20
@@ -43745,11 +43772,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -45164,11 +45191,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -45611,11 +45638,11 @@ PrefabInstance:
       objectReference: {fileID: -3447000513396954358, guid: 13c68b80f58e05a438caf5e2fa71d22b, type: 2}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4902664800673545609, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Pivot.x
@@ -46825,8 +46852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -138, y: 707}
-  m_SizeDelta: {x: 1037.5494, y: 639.8394}
+  m_AnchoredPosition: {x: -134, y: 742}
+  m_SizeDelta: {x: 1186.452, y: 731.665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853178251
 MonoBehaviour:
@@ -48191,7 +48218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: -5}
+  m_AnchoredPosition: {x: 34, y: 37.848145}
   m_SizeDelta: {x: 636.0351, y: 246.9471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912409630
@@ -48266,8 +48293,8 @@ MonoBehaviour:
   m_text: surrounded by manuscripts and scholars from across the globe, felt completely
     natural. Almost like home. Looking back now, it fills me with pride.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48291,13 +48318,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -48675,13 +48702,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Freny shared a deep bond with everyone in the <i>mohalla</i>.Her old neighbors'
-    grandparents might no longer be alive, but the moment someone mentions a neighbor's
-    name, she can tell you everything about them. \n\nIt all comes back to her, clear
-    as day. They were all so close, always doing everything together."
+  m_text: "Freny shared a deep bond with everyone in the <i>mohalla</i>. Her old
+    neighbors' grandparents might no longer be alive, but the moment someone mentions
+    a neighbor's name, she can tell you everything about them. \n\nIt all comes back
+    to her, clear as day. They were all so close, always doing everything together."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48705,8 +48732,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -49364,8 +49391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: 15}
-  m_SizeDelta: {x: 783.1685, y: 246.9471}
+  m_AnchoredPosition: {x: 61, y: 8.900879}
+  m_SizeDelta: {x: 783.169, y: 419.145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938279530
 MonoBehaviour:
@@ -49399,7 +49426,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -49436,12 +49463,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mention Navsari to almost any Parsi,\nand their thoughts will immediately\nturn
-    to the Atash Bahram where the sacred fire is housed. Often revered as our \u2018dharam
-    ni tekri\u2019, this city holds profound spiritual weight;"
+  m_text: "Mention Navsari to almost any Parsi, and their thoughts will immediately
+    turn to the Atash Bahram where the sacred fire is housed.\n\nOften revered as
+    our <i>\u2018dharam ni tekri\u2019</i>, this city holds profound spiritual weight."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -49465,8 +49492,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -49479,7 +49506,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -49886,8 +49913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.76465, y: -3}
-  m_SizeDelta: {x: 658.6977, y: 246.9471}
+  m_AnchoredPosition: {x: 38, y: -44}
+  m_SizeDelta: {x: 594.959, y: 246.947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968161587
 MonoBehaviour:
@@ -49921,7 +49948,7 @@ MonoBehaviour:
   autoRepeat: 0
   autoRepeatDelay: 2
   delayToStart: 0
-  delayToEnd: 0.5
+  delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0.01
   delayBetweenWords: 0.001
@@ -49961,8 +49988,8 @@ MonoBehaviour:
   m_text: I still remember how the ice cream came in steel cups, slightly frosted
     at the edges.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -49986,8 +50013,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.4
-  m_fontSizeBase: 44.4
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -50022,7 +50049,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 111.49121, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -50553,8 +50580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 249, y: 2497}
-  m_SizeDelta: {x: 840, y: 617}
+  m_AnchoredPosition: {x: 234, y: 2448}
+  m_SizeDelta: {x: 620.91, y: 456.072}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2000181593
 MonoBehaviour:
@@ -50714,8 +50741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: -33}
-  m_SizeDelta: {x: 821.8521, y: 285.1874}
+  m_AnchoredPosition: {x: 31, y: 67}
+  m_SizeDelta: {x: 722.382, y: 377.102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001535481
 MonoBehaviour:
@@ -50786,12 +50813,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Someone's <i>vaghar</i> hitting the hot oil, someone else's <i>rotli</i>
-    puffing on the <i>tawa</i>. The fragrance of the food being cooked would travel
-    through every door, every window, every crevice.
+  m_text: 'Someone''s <i>vaghar</i> hitting the hot oil, someone else''s <i>rotli</i>
+    puffing on the <i>tawa</i>.
+
+
+    The fragrance of the food being cooked would
+    travel through every door, every window, every crevice.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -50815,8 +50845,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -50829,7 +50859,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: -11
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -51610,8 +51640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0.000030518}
-  m_SizeDelta: {x: 669.3198, y: 307.2198}
+  m_AnchoredPosition: {x: 50, y: 69.636}
+  m_SizeDelta: {x: 669.32, y: 339.948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036986985
 MonoBehaviour:
@@ -51682,14 +51712,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'That sweet, slightly sour fermented smell in the air would make me curious,
+  m_text: That sweet, slightly sour fermented smell in the air would make me curious,
     and I would hover around hoping someone would forget that I was too young for
     a sip.
-
-'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -51713,8 +51741,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -51749,7 +51777,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.8312988, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -51915,7 +51943,6 @@ MonoBehaviour:
   - {fileID: 1807359529}
   resetIntervalDays: 10
   maxConcurrentSelections: 3
-  currentSelectionOrder: []
   doneButton: {fileID: 180247191}
   minSelectionsToEnableDone: 1
   doneDelay: 1.5
@@ -52019,7 +52046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 1008.27124}
+  m_AnchoredPosition: {x: 34, y: 1013}
   m_SizeDelta: {x: 1338.5828, y: 359.5836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053689801
@@ -52042,23 +52069,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'As she and her children take their places at the long table,
-
-    the
-    Gahambar food fills her plate: saria, gajar mewa nu
-
-    achar, roti, aalo boti,
-    pulao, custard, and patra ni machi.
-
-
-
-    But the moment her favorite bhaji
-    dana ma gosht is served,
-
-    she tells her children....'
+  m_text: "As she and her children take their places at the long table,\nthe Gahambar
+    food fills her plate: <i>saria, gajar mewa nu\nachar, rotli, aalo boti, pulao,
+    custard, and patra ni machi.</i>\n\nBut the moment her favorite <i>bhaji dana
+    ma gosht</i> is served, \nshe tells her children...."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -52082,8 +52099,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -52194,7 +52211,7 @@ MonoBehaviour:
     objectEvent:
       m_PersistentCalls:
         m_Calls: []
-  - triggerPhrase: roti
+  - triggerPhrase: rotli
     targetObject: {fileID: 765642219}
     objectEvent:
       m_PersistentCalls:
@@ -53938,8 +53955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -6}
-  m_SizeDelta: {x: 783.1685, y: 246.9471}
+  m_AnchoredPosition: {x: 61.817, y: 0}
+  m_SizeDelta: {x: 666.802, y: 246.947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128828315
 MonoBehaviour:
@@ -54011,10 +54028,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: My whole family would gather for a picnic near Rustom Wadi; the older members
-    would sit together, laughing, passing around glasses of tari.
+    would sit together, laughing, passing around glasses of <i>tari</i>.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
-  m_sharedMaterial: {fileID: -7760871754599387031, guid: 9c4392fa2587efa49a69e986761ad8ea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
+  m_sharedMaterial: {fileID: -1169439615686172690, guid: 5d9f7f59997b4e44e9b9244b3b85dbd1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -54038,8 +54055,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
-  m_fontSizeBase: 44
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -54074,7 +54091,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 111.49121, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -54295,9 +54312,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c0cfa63c30782644815d9f6a70921c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1511f86e884793a469fe1c008d633535, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -55324,11 +55341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2184359569483519111, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3915530460891447020, guid: 314741d764c278c4a8da6199c4399f32, type: 3}
       propertyPath: m_Enabled
