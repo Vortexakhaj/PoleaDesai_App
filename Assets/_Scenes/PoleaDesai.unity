@@ -33896,7 +33896,7 @@ MonoBehaviour:
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 2
-  delayToStart: 0.1
+  delayToStart: 0
   delayToEnd: 0
   typingMode: 0
   delayBetweenChars: 0
@@ -46005,7 +46005,7 @@ MonoBehaviour:
   playOnEnable: 1
   autoRepeat: 0
   autoRepeatDelay: 2
-  delayToStart: 0.1
+  delayToStart: 0
   delayToEnd: 0
   typingMode: 2
   delayBetweenChars: 0
