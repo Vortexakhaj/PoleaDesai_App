@@ -23151,8 +23151,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -168.811}
-  m_SizeDelta: {x: 1421.069, y: 1580.041}
+  m_AnchoredPosition: {x: 0, y: 68}
+  m_SizeDelta: {x: 1723.532, y: 1580.041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &889417275
 MonoBehaviour:
@@ -23238,34 +23238,47 @@ MonoBehaviour:
   m_text: '<b><color=#D29000>ACKNOWLEDGEMENTS</color></b>
 
     This exhibit is researched
-    and designed by
+    and designed by Much Ado About Museums
 
-    Much Ado About Museums in collaboration with
+    in collaboration with
 
     F. D.
-    Alpaiwalla Museum (under the auspices of the
+    Alpaiwalla Museum
 
-    Funds and Properties of the
+    (under the auspices of the Funds and Properties of
+
+    the
     Parsi Punchayet Bombay)
 
 
-    <b><color=#D29000>We thank the museum team:</color></b>
+    We thank the Chairman and Trustees of the Funds
+    and Properties of
 
-    Dr.
-    (Mrs.) Pheroza J. Godrej
+    the Parsi Punchayet Bombay.
+
+
+    <b><color=#D29000>We
+    thank the Hon. Advisors of the museum:</color></b>
+
+    Dr. (Mrs.) Pheroza J.
+    Godrej
 
     Firoza Punthakey Mistree
 
+
+    <b><color=#D29000>We thank the museum
+    team:</color></b>
+
     Ervad Kerman R. Fatakia
 
-    Tennaz
-    K. Vakil
+    Tennaz K. Vakil
 
 
-    <b><color=#D29000>We thank the community High Priests and contributors:</color></b>
+    <b><color=#D29000>We
+    thank the community High Priests and contributors:</color></b>
 
-    Dastur
-    Dr. Firoze M Kotwal
+    Dastur Dr.
+    Firoze M Kotwal
 
     Dastur Meherjirana Keki K. Ravji
 
